@@ -23,15 +23,15 @@ confirmation of entering text
 #_DIALOG_ZOBRAZ_ZRUS
 cancel text entering (the default text will be used)
 #_VLOZ_TEXT
-Enter a text:
+Enter text:
 #_VYBER_BARVU
 Choose the colour:
 #_VYBER_BARVU_POTVRD
-Confirm the chosen colour (also available with key O or Enter)
+Confirm selected colour (also available with key O or Enter)
 #_VYBER_BARVU_ZRUS
 Cancel the selection. The default colour will be used (also available with key Z or Esc)
 #_VYBER_HIC_OK
-Confirm the chosen colour (also available with key O or Enter)
+Confirm selected colour (also available with key O or Enter)
 #_VYBER_HIC_ZRUS
 Cancel the selection. The default colour will be used (also available with key Z or Esc)
 #_VYBER_HIC_PALETA
@@ -63,15 +63,15 @@ Message:
 #_FS_ATRIBUTY
 'Attributes: '
 #_FS_NAPRED_VYBRAT
-You have to choose some file for it.
+You must select file for it.
 #_FS_VYBER_SOUBOR
-Select a file:
+Select file:
 #_FS_NOVY_SOUBOR
-It allows you to place a name of new (non existing) file.
+It allows you to enter a name of new (non-existing) file.
 #_FS_INFO
 <BARVA=*;KLAVESY=iI>I<SB>nfo
 #_FS_INFO_O_SOUBORU
-Show detailed informations about selected file.
+Shows detailed information about selected file.
 #_FS_DISK
 <BARVA=*;KLAVESY=dD>D<SB>isk
 #_FS_DISK2
@@ -81,11 +81,11 @@ Change disk drive.
 #_FS_POTVRD_SOUBOR
 Confirm selected file and close the window.
 #_FS_ZRUS_VYBER
-Cancel the choose and close the window.
+Cancel selection and close the window.
 #_FS_BEZ_KONCOVKY
 Filename with extension:
 #_FS_VYBER_NECO
-Some file must be selected.
+You must select a file for it.
 #_MOUSE_NOT_INSTALLED
 There is no mouse driver installed. Load CTMouse or some similar driver.
 #_LFB_NOT_AVAILABLE
@@ -103,7 +103,7 @@ all items
 #_VYBPOL
 selected items
 #_VYBINFO
-In right panel are listed all items
-and in the left the selected one.
+The right panel lists all items
+and in the left panel the selected items.
 You can add and remove items by <<Enter>>
-With <<Tab>> you can switch between panels
+With <<Tab>> you can switch between panels.

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 url_main=http://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/repositories/latest/listing.csv
-url_aux=https://fd.lod.bz/repos/current/listing.csv
+url_aux=http://fd.lod.bz/repos/current/listing.csv
 
 INDENTING=''
 DEBUG=
@@ -107,7 +107,7 @@ function fetch_csv () {
 MASTER_HEADER=
 MASTER_FIELDS=0
 MASTER_IGNORE=";md5;group;crc;versions;version;entered-date;modified-date;"\
-"changes;primary-site;alternate-site;original-site;wiki-site;"\
+"changes;primary-site;alternate-site;original-site;wiki-site;mirror-site;"\
 "author;maintained-by;"
 
 MASTER_TOTAL=0
@@ -222,41 +222,47 @@ function process_line () {
 
     local line="${1}"
 
+	# echo "?? ${line}"
+
     local index=0
-    local id=
-    local sha=
-    local field=
-    local bit flag data storage plusone
+    local id sha field
+    local data storage finished piece xpiece
     unset data
     local data
 
     unset RECENT_ID
 
-    while [[ "${line}" != '' ]] ; do
+    while [[ ${#line} -gt 0 ]] && [[ ! ${finished} ]]; do
         (( index++ ))
-        flag=
+        if [[ ${#line} -eq 0 ]] ; then
+        	break
+        fi
         field=
 
-        # parse next field
-        while [[ "${line}" != "" ]]  && [[ ! $flag ]]; do
-            if [[ "${line:0:1}" == '"' ]] ; then
-                line="${line:1}"
-                if [[ "${line:0:1}" == '"' ]] ; then
-                    field="${field}\""
-                    line="${line:1}"
-                fi
-                bit="${line%%\"*}"
-                line="${line:1}"
-            else
-                bit="${line%%\,*}"
-                [[ "${line:${#bit}}" == ',' ]] && flag=plusone
-                line="${line:1}"
-                [[ ! $flag ]] && flag=done
-            fi
-            line="${line:${#bit}}"
-            field="${field}${bit}"
-            [[ "${line}" == ',' ]] && [[ "${flag}" == "," ]]  && plusone=yes
-        done
+		if [[ "${line:0:1}" == '"' ]] ; then
+			line="${line:1}"
+			xpiece="${line%%\"*}"
+			xpiece=${#xpiece}
+			while [[ ${xpiece} -lt ${#line} ]] ; do
+				piece="${line:${xpiece}:2}"
+				# echo "? ${piece}"
+				if [[ "${piece}" == '""' ]] ; then
+					(( xpiece++ ))
+				elif [[ "${piece:0:1}" == '"' ]] ; then
+					break
+				fi
+				(( xpiece++ ))
+			done
+			piece="${line:0:${xpiece}}"
+			line="${line:$((${xpiece} + 1 ))}"
+			field="${field}${piece}"
+		fi
+		piece="${line%%,*}"
+		line="${line:$(( ${#piece} + 1))}"
+		field="${field}${piece}"
+		field="${field//\"\"/\"}"
+
+        # echo ">> ${field}"
 
         if [[ "${CSV_FIELD[${index}]}" == 'id' ]] ; then
             id="${field}"
@@ -271,7 +277,7 @@ function process_line () {
 
     done
 
-    [[ "${plusone}" == "yes" ]] && (( index++ ))
+	# return 0
 
     RECENT_ID="${id}"
 
@@ -453,7 +459,6 @@ function print_diff () {
     setIndent -
 }
 
-
 function create_master_csv () {
 
     dented "Building master.csv"
@@ -470,13 +475,15 @@ function create_master_csv () {
 
 function main () {
 
+    [[ "${1}" = "master" ]] && 	echo "Update MasterCSV only"
     [[ -e "error.log" ]] && rm "error.log"
     local f o
     fetch_csv || return $?
     create_master_csv ibiblio.csv fd-lod.csv || return $?
+    [[ "${1}" = "master" ]] && 	return 0
     CSV_MASTER=
 
-    for f in */listing.csv */*/listing.csv */*/*/listing.csv ; do
+    for f in */listing.csv ; do
         [[ ! -e "${f}" ]] && continue
         import_csv "${f}"
         o="${f%/*}"
@@ -490,5 +497,18 @@ function main () {
 
 }
 
-main
+function maintest () {
+
+  local line
+  header=$(head -n 1 de/listing.csv)
+  set_header_fields "${header}"
+
+  line="$(grep -i 'vmsmount' de/listing.csv)"
+  line="${line//[$'\t\r\n']}"
+  process_line "${line}"
+
+}
+
+main ${@}
+# maintest
 exit $?

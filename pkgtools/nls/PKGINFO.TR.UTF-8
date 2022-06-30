@@ -1,0 +1,109 @@
+; Below whenever a $ is used, it represents a variable or string that will be
+; inserted replacing the $ in the translation. These are not variables like
+; $NLS, the $ will be replaced and NLS will remain. The exception to this
+; rule is when $ is followed by a number. For example, $0, $1, etc. In those
+; very rare cases, there are multiple strings that will be replaced.
+
+LANG=TR
+LANGUAGE=Türkçe
+TRANSLATOR=Berki Yenigün
+
+PROG.NAME=PkgInfo
+PROG.VERSION=Sürüm $
+PROG.TITLE=PkgInfo
+PROG.DESC=Paket Bilgi İzlencesi
+PROG.ABORT=program iptal edildi
+
+GBYTE=$GB
+OVERBYTE=>$GB
+PAUSED=Sürdürmek için bir düğmeye basın...
+
+MEM.USAGE=Bellek Kullanımı
+BAD.SWITCH=Yardıma bakın: Geçersiz '$' seçeneği
+LINE.TOOLONG=Hata: #$ satırı çok uzun
+
+ERROR=Hata ($)
+ERROR.NUMBER=#$
+ERROR.2=dosya bulunamadı
+ERROR.3=dosya bulunamadı
+
+PKG.INSTALLED='$' paketi kuruldu
+PKG.NOTFOUND='$' ile eşleşen bir paket bulunamadı
+
+LST.NOTFOUND=Bu paket için dosya listesi bulunamadı
+
+LSM.TITLE=Başlık
+LSM.ENTERED-DATE=Tarih
+LSM.DESCRIPTION=Açıklama
+LSM.VERSION=Sürüm
+LSM.SUMMARY=Özet
+LSM.CHANGES=Yenilikler
+LSM.KEYWORDS=Anahtar Sözcükler
+LSM.AUTHOR=Yazar
+LSM.MAINTAINED-BY=Bakımcı
+LSM.PLATFORMS=Platformlar
+LSM.COPYING-POLICY=Kopyalama Politikası
+LSM.PRIMARY-SITE=Birincil Site
+LSM.ALTERNATE-SITE=Alternatif Site
+LSM.ORIGINAL-SITE=Orijinal Site
+LSM.WIKI-SITE=Viki Sitesi
+LSM.MIRROR-SITE=Yansı Sitesi
+
+MISSING.NONE=Eksik hiçbir dosya yok
+MISSING.SOME=$1 üzerinde $0 dosya eksik
+MISSING.SOMES=$1 üzerinde $0 dosya eksik
+MISSING.ALL=Tüm dosyalar eksik
+
+BINARIES=Çalıştırılabilir dosyalar
+ALLFILES=Dosya listesi
+NA=(uygulanamaz)
+
+USAGE=Disk Kullanımı
+FILE=$ dosya
+FILES=$ dosya
+BYTE=$ bayt
+BYTES=$ bayt
+KBYTE=$KB
+MBYTE=$MB
+PACKAGES=$1 üzerinde $0 paket görüntüleniyor
+
+; HELP numbers can change and vary. However, they must be consecutive. Add more
+; lines, reduce the total count, insert between lines. Doesn't matter. Just do
+; not skip or repeat line numbers.
+
+HELP.0=$ Kullanımı : [seçenekler] [paket]
+HELP.1=
+HELP.2=     [seçenekler] Seçenekler BÜYÜK/küçük harflere duyarlı değildir. Eğer
+HELP.3=                  bir seçenek girilmediyse varsayılan $L kullanılır.
+HELP.4=
+HELP.5=     [paket]      Paket belirtmek için karmaşık joker. Örneğin, fd*pkg,
+HELP.6=                  *zip*, ?d* vb. desteklenir
+HELP.7=
+HELP.8=Temel kullanım kipleri:
+HELP.9=
+HELP.10=     $H          Yardımı görüntüler ve çıkar
+HELP.11=
+HELP.12=     $N          Kurulu paketlerin adları
+HELP.13=     $L          Kurulu paketleri listele (ad, başlık, sürüm)
+HELP.14=     $I          Kurulu paketlerin ayrıntıları
+HELP.15=     $D          $I seçeneğine benzer; ancak daha fazla ayrıntı verir
+HELP.16=
+HELP.17=     $W öge      Hangi pakete ait olduğunu bulmak için sadece belirli
+HELP.18=                 bir dosya veya dizin içeren paketleri listele.
+HELP.19=
+HELP.20=Kip değiştirici seçenekler:
+HELP.21=
+HELP.22=     $R          Eksik dosyaları raporla
+HELP.23=     $E          Çalıştırılabilir dosyaları listele
+HELP.24=     $A          Tüm dosyaları listele
+HELP.25=     $U          Disk kullanımını belirle
+HELP.26=
+HELP.27=     $P          Çıktıyı duraklat, sayfaları teker teker görüntüle
+HELP.28=     $S wild     wild dizesini ara
+HELP.29=
+HELP.30=Çeşitli seçenekler:
+HELP.31=
+HELP.32=     $VER        Sürüm verilerini görüntüle
+HELP.33=     $NLS lang   lang dili çevirilerini sistem ayarları yerine kullan
+HELP.34=
+HELP.35=     //          Seçenek karakteri için / kullanımını zorla

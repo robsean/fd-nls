@@ -24,6 +24,7 @@ LANG_EO=Эсперанто
 LANG_NL=Голландский
 LANG_TR=Турецкий
 LANG_RU=Русский
+LANG_SV=Шведский
 
 HELLO_FRAME=/w72 /h15 /c
 HELLO_OPTS=/w43 /h5 /c
@@ -43,16 +44,16 @@ CONTINUE="  Да - Продолжить установку"
 EXIT="  Нет  - Вернуться DOS"
 
 # STAGE400 - Partition screen specific
-NOPART_FRAME=/w60 /h10 /c
-NOPART_OPTS=/w40 /h5 /c
+NOPART_FRAME=/w66 /h10 /c
+NOPART_OPTS=/w48 /h5 /c
 NOPART=/s- "Диск " /f  %1 %2 /f %3 " не размечен."
 PART?="Вы хотите разметить диск?"
 PART_YES="  Да - Разметить диск %1"
 # EXIT
 
 # STAGE400 - After partitioned specific
-PARTED_FRAME=/w62 /h11 /c
-PARTED_OPTS=/w40 /h5 /c
+PARTED_FRAME=/w64 /h11 /c
+PARTED_OPTS=/w44 /h5 /c
 PARTED=/s- "Необходимо перезагрузить компьютер для завершения разметки диска."
 REBOOT?="Перезагрузить компьютер?"
 REBOOT_YES="  Да"
@@ -62,10 +63,10 @@ PARTING_FRAME=/w34 /h5 /c
 PARTING="Разметка жесткого диска..."
 
 # STAGE500 - Formating specific
-NOFORMAT_FRAME=/w55 /h10 /c
-NOFORMAT_OPTS=/w45 /h5 /c
-NOFORMATADV_FRAME=/w55 /h11 /c
-NOFORMATADV_OPTS=/w45 /h6 /c
+NOFORMAT_FRAME=/w65 /h10 /c
+NOFORMAT_OPTS=/w55 /h5 /c
+NOFORMATADV_FRAME=/w65 /h11 /c
+NOFORMATADV_OPTS=/w55 /h6 /c
 NOFORMAT=/s-  "Диск" /f %1 %2 /f %3 " не отформатирован."
 FORMAT?="Вы хотите отформатировать диск?"
 FORMAT_YES="  Да - Выполнить очистку и форматирование диска %1"
@@ -141,7 +142,7 @@ ERROR_XSYS="Ошибка при копировании системных файлов на %1."
 ERROR_CONFIG="Возникла проблема при копировании новых конфигурационных файлов."
 
 REBOOT_PAUSE=/f%1/c32 Извлеките установочный носитель и нажмите любую клавишу, чтобы перезапустить систему или /p/e/c32 нажмите /f%2 CTRL+C /f%1 для выходаЕ
-REBOOT_FRAME=/w70 /h8 /c
+REBOOT_FRAME=/w74 /h12 /c
 REBOOT_WARN.1=Обратите внимание, что вы не обновили принудительно загрузочную запись /p MBR. Если
 REBOOT_WARN.2=/c32 /s- /c32 /f%1 "%2" /f%3 не загружается, /s+ перезагрузитесь /p
 REBOOT_WARN.3=с помощью установочного носителя и выполните команду "'" /s- /f%1 MBRZAP.BAT /f%3 "'" /s+ чтобы
@@ -203,7 +204,7 @@ XFERY="  Да - Перенести"
 XFERN="  Нет  - Не переносить"
 
 OBSS_FRAME=/w52 /h8 /c
-OBSS_OPTS=/w34 /h5 /c
+OBSS_OPTS=/w40 /h5 /c
 OBSS?=Заменить загрузочную запись на диске /f %1 %2 /f %3 (%4:%5)?
 OBSSY="  Да - Перезаписать MBR"
 OBSSN="  Нет  - Не заменять принудительно MBR"

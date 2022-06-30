@@ -27,13 +27,15 @@ Genel sistem bilgisi izlencesi.
                   103 - VirtualBox.
                   104 - VMware.
                   200 - Genel, baŸka bir ”yknc tespit edildi.
-    /P          /M anahtar ile ayndr. Ancak sanal makine testlerini dŸlar.
+    /P          /M anahtar ile ayndr. Ancak sonu‡lar dŸlar ve sanal makine
+                sonu‡lar i‡in test etmez.
 
-    /E n        MBR durumu i‡in fiziki sabit disk #n (1, 2, vs)'yi snar
-                    0  - MBR tamamen boŸtur
-                    5  - MBR sadece b”lm bilgileri i‡ermektedir
-                    10 - MBR bir ”nykleyici i‡ermektedir
-                    101 - Bir hata meydana gelmiŸtir
+    /E n        Fiziki sabit disk #n (1, 2, vs.)'yi MBR (Ana ™nykleme Kayd)
+                durumu i‡in incele
+                    0  - MBR tamamen boŸ
+                    5  - MBR sadece b”lm verileri i‡eriyor
+                    10 - MBR ”n baŸlatma kodu i‡eriyor
+                    101 - Hata meydana geldi
 
 Bilhassa programclar ve Ar-Ge i‡in faydal olan daha fazla se‡enekleri aŸa§da
 bulabilirsiniz. Bu se‡enekler bir sredir mevcut, ancak resmi olarak V8 Power
@@ -48,5 +50,10 @@ olarak yaymlanabilirler.
     /R dize     Tm geleneksel bellekte dizeyi ara
     /U dize     Bellekte (a000:0000 ve zeri) BšYšK/k‡k harf fark g”zetmeden
                 dizeyi ara
+
+    /J pos *    Komut satrnn kalannda pos konumundaki karakterin ASCII
+    			de§erini hata seviyesi olarak geri g”nder. ayet konum
+    			bulunamadysa 0 geri g”nderilir.
+    /K pos *	/J ile ayndr fakat ”nce byk harf olarak de§iŸtirilir.
 
              (Henz geliŸtirilme aŸamasndadr, daha fazla bilgi eklenecektir.)

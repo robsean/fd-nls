@@ -8,6 +8,10 @@ PROG.TITLE=PkgInfo
 PROG.DESC=Utilidad de informaci¢n del paquete
 PROG.ABORT=programa abortado
 
+GBYTE=$GB
+OVERBYTE=>$GB
+PAUSED=presione una tecla para continuar...
+
 MEM.USAGE=Uso de memoria
 BAD.SWITCH=Ver ayuda: opci¢n inv lida '$'
 LINE.TOOLONG=Error: La l¡nea #$ es demasiado larga
@@ -15,6 +19,7 @@ LINE.TOOLONG=Error: La l¡nea #$ es demasiado larga
 ERROR=Error ($)
 ERROR.NUMBER=#$
 ERROR.2=archivo no encontrado
+ERROR.3=directorio no encontrado
 
 PKG.INSTALLED=El paquete '$' est  instalado
 PKG.NOTFOUND=No se puede encontrar un paquete que coincida con '$'
@@ -37,7 +42,6 @@ LSM.ALTERNATE-SITE=Sitio web alternativo
 LSM.ORIGINAL-SITE=Sitio web original
 LSM.WIKI-SITE=Sitio web de ayuda
 LSM.MIRROR-SITE=Sitio web espejo
-LSM.NA=(n/a)
 
 MISSING.NONE=No faltan archivos
 MISSING.SOME=Falta $0 del archivo $1
@@ -85,8 +89,11 @@ HELP.20=     $E          Lista de archivos ejecutables
 HELP.21=     $A          Lista de todos los archivos
 HELP.22=     $U          Determinar el uso del disco
 HELP.23=
-HELP.24=Opciones miscel neas:
-HELP.25=
-HELP.26=     $NLS lang   Use esto en lugar de la configuraci¢n del sistema
-HELP.27=     //          Forzar el uso de / para el car cter de cambio
-
+HELP.24=     $P          Pausar el texto despu‚s de cada p gina
+HELP.25=     $S comod¡n  Buscar comod¡n en los metadatos del paquete
+HELP.26=
+HELP.27=Opciones miscel neas:
+HELP.28=
+HELP.29=     $VER        Mostrar informaci¢n de versi¢n
+HELP.30=     $NLS lang   Use esto en lugar de la configuraci¢n del sistema
+HELP.31=     //          Forzar el uso de / para el car cter de cambio

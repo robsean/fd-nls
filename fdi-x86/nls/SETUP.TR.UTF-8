@@ -1,9 +1,9 @@
 # Welcome Message
 WELCOME_DEF=/fLightGreen %1 /fCyan %2 /fGray kurulum programına hoş geldiniz.
-WELCOME_ADV= /fLightGreen %1 /fCyan %2 /fGray /s- /fLightRed gelişmiş /fGray kurulum programına hoş geldiniz.
+WELCOME_ADV= /fLightGreen %1 /fCyan %2 /fGray /fLightRed gelişmiş /fGray kurulum programına hoş geldiniz.
 WELCOME_0=/p
-WELCOME_1=/fLightGreen "%1" /fGray tam bir işletim sistemidir. Kurulum işlemi, mevcut /p işletim sisteminizin üzerine yazıp silinmesine /p neden olabilir.
-WELCOME_2=/c32 Eğer yapmak istediğiniz bu değilse kurulumu sürdürmeyin.
+WELCOME_1=/fLightGreen "%1" /fGray tam bir işletim sistemidir. Kurulum işlemi, mevcut işletim /p /fLightRed /BlinkON "sisteminizin üzerine yazıp silinmesine neden olabilir." /BlinkOff /fGray /p
+WELCOME_2=/fGray /c32 Eğer yapmak istediğiniz /fLightRed "bu değilse kurulumu sürdürmeyin." /fGray
 WELCOME_3=
 WELCOME_4=
 WELCOME_5=/p
@@ -15,11 +15,16 @@ REBOOT=/p Şimdi yeniden başlatmak istiyor musunuz? /c32
 
 AUTO_YES=/s- [E,H]? /fWhite E /fGray
 AUTO_NO=/s- [E,H]? /fWhite H /fGray
+AUTO_FMT=/s- "[T,H,P]?" /fWhite "H" /fGray
+
+PROMPT_YESNO=/s EH
+PROMPT_FMT=/s THP
 
 ABORTED=/fLightRed %1 %2 kurulumu iptal edildi. /e /fGray /bBlack
 
-PARTITION_AUTO=/fWhite %1 /s- /fGray sürücüsünü kendiliğinden bölümlendir.
-PARTITION_MBR=/fWhite %1 /s- /fGray sürücüsü üzerinde Ana Önyükleme Kaydını güncelle.
+PARTITION_AUTO=/fWhite %1 /fGray sürücüsünü kendiliğinden bölümlendir.
+PARTITION_WARN=/fYellow İKAZ: /fGray KERNL86 için 2 GB değerinden düşük bir FAT16 bölümü gereklidir.
+PARTITION_MBR=/fWhite %1 /fGray sürücüsü üzerinde Ana Önyükleme Kaydını güncelle.
 PARTITION_ACTIVE=/fWhite %1 /fGray disk bölümünü etkin olarak ayarla.
 PARTITION_DONE=/p Yeni bölümlendirme şemasının etkin olabilmesi için bilgisayarınızı yeniden başlatın.
 
@@ -27,22 +32,22 @@ FORMAT=/fWhite %1 /fGray sürücüsü biçimlendirilmiş gözükmüyor.
 FORMAT_DEF=Sürücünüzü biçimlendirmek istiyor musunuz? /c32
 FORMAT_ADV=Sürücünüzü nasıl biçimlendirmek istersiniz? /s- /c32 ( /fWhite T /fGray am, /c32 /fWhite H /fGray ızlı, /c32 İ /fWhite p /fGray tal) /c32
 
-FILESYSTEM_TEST=/fWhite %1 /s- /fGray sürücüsündeki dosya sistemi sınanıyor.
-INSERT_DISKETTE=/fWhite #%1 /fGray (%2) numaralı disketi /fWhite %3 /s- /fGray sürücüsüne yerleştirin.
+FILESYSTEM_TEST=/fWhite %1 /fGray sürücüsündeki dosya sistemi sınanıyor.
+INSERT_DISKETTE=/fWhite #%1 /fGray (%2) numaralı disketi /fWhite %3 /fGray sürücüsüne yerleştirin.
 PRESS_KEY=Sürdürmek için bir düğmeye basın.
 
-TARGET_ASK=/fLightGreen %1 /s- /fGray kurulumunu nereye yapmak istersiniz? /c32
+TARGET_ASK=/fLightGreen %1 /fGray kurulumunu nereye yapmak istersiniz? /c32
 TARGET_PROMPT=/fWhite /bBlue %1
 TARGET_BAD=/fLightRed Geçersiz sürücü seçimi. Diskete kurulum yapılamaz.
 
 CHANGE_PATH=/fWhite %1 /fGray yolu halihazırda mevcut. /p Yükleme dizinini değiştirmek ister misiniz? /c32
 
-BACKUP_OLD=/fWhite %1 /fGray /s- sürücüsünde önceden kurulmuş başka bir işletim sistemi bulundu. /s+ /p Eski dosyaları yedeklemek ister misiniz? /c32
+BACKUP_OLD=/fWhite %1 /fGray sürücüsünde önceden kurulmuş başka bir işletim sistemi bulundu. /s+ /p Eski dosyaları yedeklemek ister misiniz? /c32
 BACKUP_ASK=Yedek dosyalarını nereye koymak istersiniz? /c32
 BACKUP_PROMPT=/fWhite /bBlue %1
 BACKUP_BAD=/fLightRed Geçersiz konum seçimi. O konuma yedekleme yapılamıyor. /fGray
 
-DELETE_OLD=/fWhite %1 /fGray konumundaki mevcut dosyaların üzerine yazılabilir. /p Yükleme öncesinde eski dizini silmek ister misiniz? /c32
+DELETE_OLD=/fWhite %1 /fGray konumundaki mevcut dosyaların üzerine yazılabilir. /p Yükleme öncesinde eski dizini tamamen silmek ister misiniz? /c32
 
 FORCE_MBR=/fWhite %1 /fGray sürücüsündeki Ana Önyükleme Kaydını zorla güncelle /c32
 SYS_FILES=/fWhite %1 /fGray sürücüsüne yeni sistem önyükleme dosyaları yükle /c32
@@ -51,7 +56,7 @@ CFG_FILES=/fWhite %1 /fGray sürücüsündeki sistem yapılandırma dosyaların�
 STATUS_MSG=Kurulum ayarları: /p
 STATUS_CPU=/r4/c32 Platform (CPU) /fWhite %1 /fGray (%2)
 STATUS_FROM=/r4/c32 /fWhite %1 /fGray konumundan yükle
-STATUS_DRV=/r4/c32 Hedef sürücü: /fWhite %1 /fGray (%2:%3)
+STATUS_DRV=/r4/c32 Hedef sürücü: /fWhite %1 /fGray (disk %2, bölüm %3)
 STATUS_DOS=/r4/c32 DOS yolu yükle: /fWhite %1 /fGray
 STATUS_BAK=/r4/c32 Eski işletim sistemi yedekle: /fWhite %1 /fGray
 STATUS_POS=/r4/c32 Eski işletim sistemi dizini: /fWhite %1 /fGray
@@ -59,18 +64,18 @@ STATUS_MBR=/r4/c32 Yeni AÖK (MBR) yükle: /fWhite %1 /fGray
 STATUS_SYS=/r4/c32 Sistem dosyalarını kopyala: /fWhite %1 /fGray
 STATUS_CFG=/r4/c32 Yapılandırma dosyalarını kopyala: /fWhite %1 /fGray
 
-INSTALL_NOW=/fLightGreen %1 /fCyan %2 /fGray /s- kurulumu için hazırız.
+INSTALL_NOW=/fLightGreen %1 /fCyan %2 /fGray kurulumu için hazırız.
 EXTRACTION=/fLightGreen %1 /fCyan %2 /fGray dosya çıkarılıyor.
 UPDATE_LST=Paket listelemeleri güncelleniyor. /p
 
-DO_BACKUP=Bir önceki işletim sistemi dosyalarının yedeği /fWhite %1 /fGray /s- konumuna yapılıyor.
+DO_BACKUP=Bir önceki işletim sistemi dosyalarının yedeği /fWhite %1 /fGray konumuna yapılıyor.
 DO_ERASE=Eski /fWhite %1 /fGray dizini ve dosyaları siliniyor.
-DO_SYSFILES=Yeni sistem dosyaları /fWhite %1 /fGray /s- konumuna aktarılıyor.
-DO_FORCEMBR=/fWhite %1 /fGray /s- sürücüsündeki AÖK zorla güncelleniyor.
-DO_ACTIVATE=Etkin önyükleme bölümü /fWhite %1 /fGray /s- : /fWhite %2 /fGray olarak ayarlanıyor.
-DO_CFGFILES=Yeni yapılandırma dosyaları /fWhite %1 /fGray /s- konumuna aktarılıyor.
+DO_SYSFILES=Yeni sistem dosyaları /fWhite %1 /fGray sürücüsüne aktarılıyor.
+DO_FORCEMBR=/fWhite %1 /fGray sürücüsündeki AÖK zorla güncelleniyor.
+DO_ACTIVATE=Etkin önyükleme bölümü /fWhite %1 /fGray diski ve /fWhite %2 /fGray bölümü olarak ayarlanıyor.
+DO_CFGFILES=Yeni yapılandırma dosyaları /fWhite %1 /fGray sürücüsüne aktarılıyor.
 DO_PREPARE=Çalıştırılabilir dosyaların ve izlencelerin kurulumuna hazırlanılıyor.
-DO_INSTALL=/fWhite %2 /fGray /s- için /fLightGreen %1 /fGray dosyaları yükleniyor.
+DO_INSTALL=/fWhite %2 /fGray için /fLightGreen %1 /fGray dosyaları yükleniyor.
 
 DONE_NOW=/fLightGreen %1 /fCyan %2 /fGray kurulumu tamamlandı.
 REBOOT_NOW=Şimdi yeniden başlatmak istiyor musunuz? /c32
@@ -81,9 +86,9 @@ SUCCESS=/fLightGreen Başarılı. /fGray
 FAILED=/fLightRed Başarısız. /fGray
 
 # Copyright and License Notices
-TITLE=/fLightGreen %1 /fLightCyan %2 /s- /fWhite + /fGray " Yükleyici (" /fWhite FDI-x86 /fGray ")"
-COPYRIGHT=/fDarkGray GPL v2.0 Lisansı kapsamında yayımlanmıştır./pTelif hakkı $YEAR$ Jerome Shidel. /fGray /p
-TRADEMARK=FreeDOS, Jim Hall'un tescilli markasıdır; 2001-$YEAR$.
+TITLE=/fLightGreen %1 /fLightCyan %2 /s- /fWhite + /fGray /s+ "Yükleyici (" /fWhite FDI-x86 /fGray ")"
+COPYRIGHT=/fDarkGray GPL v2.0 Lisansı kapsamında yayımlanmıştır. /p Telif hakkı 2021-2022 Jerome Shidel. /fGray /p
+TRADEMARK="FreeDOS, Jim Hall'un tescilli markasıdır; 2001-2022."
 
 # Help screen
 HELP_0="kullanım: SETUP.BAT [seçenekler] [hedef]"
@@ -112,20 +117,20 @@ ERROR_NoCfgEnv=Temel sistem yapılandırması ve yol ayarları belirlenemiyor.
 ERROR_NotFreeCOM=Bu toplu iş dosyası FreeCOM veya FreeDOS uyumlu başka bir kabuk gerektirir.
 ERROR_MissingFreeCOM=FreeDOS kabuğu FreeCOM bulunamadı.
 ERROR_MissingAUTOEXEC=FreeDOS başlangıç toplu iş dosyası FDAUTO.BAT bulunamadı.
-ERROR_MakeDir=/fWhite %1 /fGray /s- dizini oluşturulamıyor.
-ERROR_BackupCfg=Önyükleme 've/veya' yapılandırma dosyaları yedeklenemiyor.
+ERROR_MakeDir=/fWhite %1 /fGray dizini oluşturulamıyor.
+ERROR_BackupCfg="Önyükleme 've/veya' yapılandırma dosyaları yedeklenemiyor."
 ERROR_BackupOS=Hedef dizindeki dosyalar yedeklenemiyor.
 ERROR_Partition=Bölümlendirme hatası. Bir sabit disk mevcut veya /p mevcut işletim sistemi tarafından tanımlanamıyor olabilir. /p /p Bölümlendirme için başka bir yöntem deneyin.
-ERROR_NoPartition=/fWhite %1 /fGray /s- için BIOS bölümü bulunamıyor. /s+ /p El ile yükleme (veya gelişmiş kipte zorla güncellenen AÖK) önerilir.
-ERROR_Format=/fWhite %1 /fGray /s- sürücüsünü biçimlendirmeye çalışırken bir hata oluştu. /s+ /p /p Biçimlendirme için başka bir işlem yapılması gerekecek.
-ERROR_FileSystem=/fWhite %1 /s- /fGray sürücüsünde geçici alan ilklendirilemedi.
+ERROR_NoPartition=/fWhite %1 /fGray için BIOS bölümü bulunamıyor. /s+ /p El ile yükleme (veya gelişmiş kipte zorla güncellenen AÖK) önerilir.
+ERROR_Format=/fWhite %1 /fGray sürücüsünü biçimlendirmeye çalışırken bir hata oluştu. /s+ /p /p Biçimlendirme için başka bir işlem yapılması gerekecek.
+ERROR_FileSystem=/fWhite %1 /fGray sürücüsünde geçici alan ilklendirilemedi.
 ERROR_CfgBackup=Yedek dizini yapılandırılamadı.
-ERROR_MBRBackup=/fWhite %1 /fGray /s- sürücüsü için Ana Önyükleme Kaydı yedeği oluşturulamadı.
-ERROR_SysFiles=Sistem dosyaları /fWhite %1 /fGray /s- sürücüsüne kopyalanamadı.
-ERROR_BootSector=/fWhite %1 /fGray /s- sürücüsü için önyükleme bölümü güncellenemedi.
-ERROR_MBRUpdate=/fWhite %1 /fGray /s- sürücüsü için önyükleme bölümü güncellenemedi.
-ERROR_Activate=/fWhite %1 /fGray sürücüsü /fWhite %2 /fGray /s- önyükleme bölümüne atanamadı.
-ERROR_CfgFiles=Yeni yapılandırma dosyaları /fWhite %1 /fGray /s- sürücüsüne yüklenemedi.
-ERROR_XfrFiles=Gerekli yükleyici dosyası /fWhite %1 /fGray /s- konumuna çoğaltılamadı.
+ERROR_MBRBackup=/fWhite %1 /fGray sürücüsü için Ana Önyükleme Kaydı yedeği oluşturulamadı.
+ERROR_SysFiles=Sistem dosyaları /fWhite %1 /fGray sürücüsüne kopyalanamadı.
+ERROR_BootSector=/fWhite %1 /fGray sürücüsü için önyükleme bölümü güncellenemedi.
+ERROR_MBRUpdate=/fWhite %1 /fGray sürücüsü için önyükleme bölümü güncellenemedi.
+ERROR_Activate=/fWhite %1 /fGray sürücüsü /fWhite %2 /fGray önyükleme bölümüne atanamadı.
+ERROR_CfgFiles=Yeni yapılandırma dosyaları /fWhite %1 /fGray sürücüsüne yüklenemedi.
+ERROR_XfrFiles=Gerekli yükleyici dosyası /fWhite %1 /fGray konumuna çoğaltılamadı.
 ERROR_SAF=/fWhite %1 /fGray arşivi çıkartılırken bir sorun oluştu.
 ERROR_WTF=Temel bir işlem sırasında bilinmeyen bir hata oluştu.

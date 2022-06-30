@@ -1,0 +1,174 @@
+VERSION=%0 (sürüm %1)
+LICENSE=3 koşullu BSD Lisansı
+COPYRIGHT=Telif hakkı (c) %1, %0
+RIGHTS=Tüm hakları saklıdır.
+
+; If you want credit for your translation shown in the program, simply
+; edit the LANGUAGE field and fill in the TRANSLATOR field. :-)
+
+LANGUAGE=Türkçe
+TRANSLATOR=Berki Yenigün
+
+THANKS=%0 kişisine %1 çeviri için teşekkür ederiz.
+
+LOADING=%0 Yükleniyor...
+STANDBY=İşlem Sürüyor...
+GORT=Klaatu barada nikto
+
+COMBO.ALTPLUS=(Alt+%0)
+COMBO.CTLPLUS=(Ctrl+%0)
+
+; Main Menu Items
+MENU.FILE=Dosya
+MENU.FILE.NEW.FONT=Yeni Yazıtipi
+MENU.FILE.NEW.IMAGE=Yeni Resim
+MENU.FILE.NEW.SPRITE=Yeni Hareketli Grafik
+MENU.FILE.OPEN=Aç...
+MENU.FILE.IMPORT=İçe Aktar...
+MENU.FILE.SAVE=Kaydet
+MENU.FILE.SAVEAS=Farklı Kaydet...
+MENU.FILE.EXPORT=Dışa Aktar...
+MENU.FILE.SAVEAS.IMGIGG=IGG Grafiği
+MENU.FILE.SAVEAS.SPRIGS=IGS Hareketli Grafiği
+MENU.FILE.SAVEAS.IMGBMP=BMP resmi
+MENU.FILE.SAVEAS.IMGPCX=PCX resmi
+MENU.FILE.SAVEAS.IMGTIF=TIF resmi
+MENU.FILE.SAVEAS.IMGGIF=GIF resmi
+MENU.FILE.SAVEAS.IMGJPG=JPG resmi
+MENU.FILE.SAVEAS.IMGJP2=JP2 resmi
+MENU.FILE.SAVEAS.IMGXPM=XPMv3 resmi
+MENU.FILE.SAVEAS.IMGASM=Nasm dahili
+MENU.FILE.SAVEAS.IMGPAS=Pascal kodu
+MENU.FILE.SAVEAS.IMGXBM=C kodu
+MENU.FILE.EXIT=Çık
+
+MENU.EDIT=Düzenle
+MENU.EDIT.COPY=Kopyala
+MENU.EDIT.PASTE=Yapıştır
+
+MENU.EDIT.FRAME.ADD=Çerçeve ekle
+MENU.EDIT.FRAME.DEL=Çerçeve sil
+MENU.EDIT.SEQ.ADD=Dizi ekle
+MENU.EDIT.SEQ.DEL=Dizi sil
+
+MENU.TOOLS=Araçlar
+MENU.IMAGE.CLEAR=Temizle
+MENU.IMAGE.INVERT=Tersine Çevir
+MENU.IMAGE.ROTATE=Döndür
+MENU.IMAGE.FLIP=Çevir
+MENU.IMAGE.SHIFT=Kaydır...
+MENU.IMAGE.SHIFT.UP=Yukarı
+MENU.IMAGE.SHIFT.DOWN=Aşağı
+MENU.IMAGE.SHIFT.LEFT=Sol
+MENU.IMAGE.SHIFT.RIGHT=Sağ
+
+MENU.HELP=Yardım
+MENU.HELP.ABOUT=Hakkında...
+
+COLOR.DRAW=Çiz
+COLOR.ERASE=Sil
+
+NOFILES=eşleşen dosya yok
+DLG.BUTTON.OK=tamam
+DLG.BUTTON.CANCEL=iptal et
+
+DLG.OPEN.CAPTION=Dosya aç
+DLG.IMPORT.CAPTION=Resim içe aktar
+DLG.EXPORT.CAPTION=Dışa aktar
+DLG.SAVEAS.FORMAT=Dosya biçimi
+
+; Some more strings to come regarding sprite animation sequences.
+
+ERROR.MOUSE=fare bulunamıyor. Olması zorunludur.
+ERROR.VIDEO=hiçbir uygun grafik sürücüsü bulunamıyor
+
+ERROR.DRIVER.FIND=%0 sürücüsü bulunamıyor
+ERROR.DRIVER.INIT=%0 sürücüsü başlatılamıyor
+ERROR.DRIVER.MODE=%0 grafik sürücüsü %1 kipinde açılıyor
+
+ERROR.NOHELP=yardım mevcut değil
+ERROR.FORMAT=%0 dosyasının biçimi tanınamadı
+
+ERROR.TOOBIG=resim, %0 x %1 piksel ebat sınırını aşıyor
+
+; there are numerous other error message/codes possible. But those are should
+; rarely (if ever) occur. So, have been ommited. Most of the ones left in should
+; only occur when compiled in "Debug" mode. I should probably ommit those too.
+
+ERROR.1=geçersiz işlev
+ERROR.2=dosya bulunamadı
+ERROR.3=yol bulunamadı
+ERROR.4=çok fazla açık dosya
+ERROR.5=dosyaya erişim reddedildi
+ERROR.8=bellek yetersiz
+ERROR.201=veri aralığı denetimi
+ERROR.202=yığın taşması
+ERROR.203=bellek taşması
+ERROR.204=işaretçi işlemi
+ERROR.220=veri türü denetimi
+ERROR.221=desteklenmeyen işlem
+ERROR.222=geçersiz dosya biçimi
+ERROR.223=fazla büyük yapı
+ERROR.224=veri denetimi
+ERROR.225=atanmamış işaretçi
+ERROR.226=kilitli varlığı at
+ERROR.227=sıkıştırılmış resim hatası
+ERROR.230=başarısız başlatma
+ERROR.231=kötü sürücü
+ERROR.232=desteklenmeyen sürücü türü
+ERROR.233=geçersiz sürücü türü
+ERROR.234=sürücü denetimi
+ERROR.240=grafik sürücüsü başarısızlığı
+ERROR.241=ses sürücüsü başarısızlığı
+ERROR.242=klavye sürücüsü başarısızlığı
+ERROR.243=fare sürücüsü başarısızlığı
+ERROR.244=oyun kolu sürücüsü başarısızlığı
+
+; Keyboard shortcuts. All are mapped to ALT+ the letter.
+; Please be aware, programs running under this Gş do not use the DOS keyboard
+; driver. I had to write my own driver which allows multiple simultaneous
+; keystrokes to support things like A+R+D+(RIGHT-SHIFT). So, if your language
+; specific shortcut requires a key not present on a standard english keyboard,
+; you'll need to let me know so I can map it to that character code. Also,
+; use only lowercase letters. Uppercase would require also preğing a shift
+; key to trigger the shortcut.
+
+MKEY.FILE=d
+MKEY.FILE.NEW.FONT=y
+MKEY.FILE.NEW.IMAGE=r
+MKEY.FILE.NEW.SPRITE=h
+
+MKEY.FILE.OPEN=a
+MKEY.FILE.SAVE=k
+MKEY.FILE.SAVEAS=f
+MKEY.FILE.IMPORT=i
+MKEY.FILE.EXPORT=a
+
+MKEY.FILE.EXIT=ç
+
+MKEY.EDIT=ü
+MKEY.EDIT.COPY=k
+MKEY.EDIT.PASTE=y
+
+MKEY.EDIT.FRAME.ADD=e
+MKEY.EDIT.FRAME.DEL=s
+MKEY.EDIT.SEQ.ADD=z
+MKEY.EDIT.SEQ.DEL=i
+
+MKEY.TOOLS=a
+MKEY.IMAGE.CLEAR=e
+MKEY.IMAGE.INVERT=t
+MKEY.IMAGE.ROTATE=d
+MKEY.IMAGE.FLIP=i
+
+; These could be set as well. But, the editor directly maps the SHIFT+ARROW
+; keystrokes to perform the shift-image actions.
+
+MKEY.IMAGE.SHIFT=s
+MKEY.IMAGE.SHIFT.UP=k
+MKEY.IMAGE.SHIFT.DOWN=j
+MKEY.IMAGE.SHIFT.LEFT=l
+MKEY.IMAGE.SHIFT.RIGHT=h
+
+MKEY.HELP=y
+MKEY.HELP.ABOUT=h

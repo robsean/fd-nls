@@ -1,276 +1,337 @@
+#identifikuj_se
+TÃ¼rkÃ§e
 #sys_font
-<FONT=latin216.ch>
+<FONT=unismall.ufn>
 #sys_font_maly
-latin214.ch
+unismall.ufn
 #m1
 Dosya
 #m2
-Se‡enekler
+SeÃ§enekler
 #m3
-Yardm
+YardÄ±m
 #m31
-Program hakknda
+Program hakkÄ±nda
 #m32
-INFO.TXT dosyasn ykle <<Alt-F1>>
+INFO.TXT dosyasÄ±nÄ± yÃ¼kle <<Alt-F1>>
 #m33
 Sistem bilgisi
 #m4
 Metin
 #m11
-Yeni dosya    <<F1>>
+Yeni dosya <<F1>>
 #m12
-A‡            <<F3>>
+AÃ§         <<F3>>
 #m13
-Kaydet        <<F2>>
+Kaydet     <<F2>>
 #m14
 Komut istemi
 #m15
-€k           <<ESC>>
+Ã‡Ä±k        <<ESC>>
 #m16
-Dosyay kapat <<Alt-F3>>
+DosyayÄ± kapat <<Alt-F3>>
 #m21
-™n plan rengi
-#m22
+Renkler
+#m211
+Ã–n plan rengi
+#m212
 Arka plan rengi
+#m213
+MasaÃ¼stÃ¼ rengi
+#m214
+SeÃ§ili metin
+#m215
+Vurgulanan satÄ±r rengi
+#m22
+Lisan
 #m23
-Masast rengi
+GÃ¼ncel satÄ±rÄ± vurgula
 #m24
-Yaztipi de§iŸtir
+YazÄ±tipi deÄŸiÅŸtir
 #m25
-Resim szgeci se‡
+Resim sÃ¼zgeci seÃ§
 #m26
 Tercih edilen klavyeler
 #m27
-Tercih edilen Unicode szge‡leri
+Tercih edilen Unicode sÃ¼zgeÃ§leri
 #m28
-Ayarlar kaydet
+AyarlarÄ± kaydet
 #m29
-Tercih edilen ASCII szge‡leri
+Tercih edilen ASCII sÃ¼zgeÃ§leri
 #m41
-UTF-8'e d”nŸtrme
+UTF-8'e dÃ¶nÃ¼ÅŸtÃ¼r
 #m42
-UTF-8'den d”nŸtrme
+UTF-8'den dÃ¶nÃ¼ÅŸtÃ¼r
 #m43
-Ger‡ek s”zck kaydrmay dzelt
-#m43_pomoc
-S”zck kaydrma algoritmalar tarafndan "yumuŸak kaydrlan"tm satrlar "sert kaydrmaya" d”nŸtrlr.
+SÃ¶zcÃ¼k kaydÄ±r
+#m431
+GÃ¼ncel sÃ¶zcÃ¼k kaydÄ±rmayÄ± dÃ¼zelt
+#m431_pomoc
+SÃ¶zcÃ¼k kaydÄ±rma algoritmalarÄ± tarafÄ±ndan "yumuÅŸak kaydÄ±rÄ±lan" tÃ¼m satÄ±rlar "sert kaydÄ±rmaya" dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r.
 #m44
-Ara           <<Ctrl-F>>
+Ara         <<Ctrl-F>>
 #m45
-Yeniden ara   <<Ctrl-S>>
+Yeniden ara <<Ctrl-S>>
 #m46
-Yerine koy    <<Ctrl-H>>
+DeÄŸiÅŸtir    <<Ctrl-H>>
 #m47
-Karakter haritas
+Karakter eÅŸlem
 #m48
-ASCII d”nŸmler
+ASCII dÃ¶nÃ¼ÅŸÃ¼mler
+#m49
+Bloklar Ã¼zerinde eylemler
+#m491
+Karakterleri HTML'ye dÃ¶nÃ¼ÅŸtÃ¼r
+#m492
+BÃ¼yÃ¼k harfe dÃ¶nÃ¼ÅŸtÃ¼r
+#m493
+KÃ¼Ã§Ã¼k harfe dÃ¶nÃ¼ÅŸtÃ¼r
 #vyber_soubor
-Bir dosya se‡:
+Bir dosya seÃ§:
 #jak_to_ulozit
-Dosya adn yaz
+Dosya adÄ±nÄ± yaz
 #soubor_existuje_prepsat
-Bu dosya zaten mevcut,
-zerine yazlsn m?
+Bu dosya zaten mevcut
+Ãœzerine yazÄ±lsÄ±n mÄ±?
 #napoveda
-Uygulama hakknda
+Uygulama hakkÄ±nda
 #dotaz
 soru
 #info
 bilgi
 #varovani
-<BARVA=51200>Uyar!<SB>
+<BARVA=51200>UyarÄ±!<SB>
 #opravdu_konec
-Ger‡ekten ‡klsn m?
-De§iŸiklikler kaydedilmeyecektir.
+GerÃ§ekten Ã§Ä±kÄ±lsÄ±n mÄ±?
+DeÄŸiÅŸiklikler kaydedilmeyecektir.
 #tento_soubor_uz_jednou_mame
-Bu dosya zaten a‡lmŸtr.
-Blo‡ek onu tekrar a‡manza izin verir; ancak
-”nceki ”rneklemeden ba§msz bir Ÿekilde iŸleyecektir!
-(F.E. PASCAL tmleŸik geliŸtirme ortamnn yapt§ gibi de§il)
+Bu dosya zaten aÃ§Ä±k.
+Blocek onu yeniden aÃ§manÄ±za izin verir; ancak
+Ã¶nceki oturumdan baÄŸÄ±msÄ±z bir ÅŸekilde davranacaktÄ±r!
+(Ã¶rn. Pascal tÃ¼mleÅŸik geliÅŸtirme ortamÄ±nÄ±n yaptÄ±ÄŸÄ± gibi deÄŸil)
 #unicode
 Unicode
 #zalamovani
-s”zck kaydrma
+SÃ¶zcÃ¼k kaydÄ±r
 #unicode_varovani
-Dikkat! Unicode olmayan dosyalar i‡in Unicode'u etkinleŸtirmemeniz gerekir. Yoksa k”t Ÿeyler olabilir ;-)
+Dikkat! Unicode olmayan dosyalar iÃ§in Unicode'u etkinleÅŸtirmemeniz gerekir. Yoksa kÃ¶tÃ¼ ÅŸeyler olabilir ;-).
 #vyber_barvu_popredi
-™n plan rengini se‡
+Ã–n plan rengini seÃ§
 #vyber_barvu_pozadi
-Arka plan rengini se‡
+Arka plan rengini seÃ§
 #vyber_barvu_zakladu
-Masast rengini se‡
+MasaÃ¼stÃ¼ rengini seÃ§
+#zda_pro_rad
+GÃ¼ncel satÄ±rÄ± vurgulamak istiyor musunuz?
 #nastaveni_ulozeno
 Ayarlar kaydedildi
 #ok
-' <BARVA=*;KLAVESY=oO>T<SB>amam '
+' <BARVA=*;KLAVESY=tT>T<SB>amam '
 #zrus
-'<BARVA=*;KLAVESY=cC>˜<SB>ptal '
+'<BARVA=*;KLAVESY=iÄ°>Ä°<SB>ptal'
 #zatim_neni
-Bu iŸlev henz mevcut de§ildir.
+Bu iÅŸlev henÃ¼z mevcut deÄŸildir.
 #text_napovedy
-<FONT=surea37.fn>Blo‡ek<SF>
-<FONT=latin216.ch>srm 1.4
-Derleme tarihi: <BARVA=65535>27.6.2013<SB>
-Laaca (laaca@seznam.cz) tarafndan programlanmŸtr
+<FONT=surea37.fn>Blocek<SF>
+<FONT=unismall.ufn>version 1.62
+Derleme tarihi: <BARVA=65535>15.1.2019<SB>
+Laaca (laaca@seznam.cz) tarafÄ±ndan programlanmÄ±ÅŸtÄ±r
 
-Blo‡ek dosyalar UTF-8 kodlamas ile dzenleyebilen
-metin dzenleyicisi ve resim g”rntleyicisidir
-dolaysyla mesela WWW sayfalar yazmak i‡in ‡ok kullanŸldr.
+Blocek dosyalarÄ± UTF-8 kodlamasÄ± ile dÃ¼zenleyebilen
+metin dÃ¼zenleyicisi ve resim gÃ¶rÃ¼ntÃ¼leyicisidir
+dolayÄ±sÄ±yla Ã¶rneÄŸin WWW sayfalarÄ± yazmak iÃ§in Ã§ok kullanÄ±ÅŸlÄ±dÄ±r.
+Blocek Ã§ok uzun satÄ±rlar barÄ±ndÄ±ran Ã§ok bÃ¼yÃ¼k dosyalarÄ± dÃ¼zenleyebilir.
+Mateusz Viste'ye Unicode yazÄ±tipleri iÃ§in teÅŸekkÃ¼rler.
+Blocek aynÄ± zamanda yaygÄ±n grafik biÃ§imlerindeki dosyalarÄ± gÃ¶rÃ¼ntÃ¼leyebilecek
+sade bir gÃ¶rÃ¼ntÃ¼leyici olarak kullanÄ±labilir. Bununla beraber resimleri
+dÃ¼zenlemeye olanak saÄŸlamaz.
 
-Blo‡ek azami dosya boyutu veya satr uzunlu§u konusunda snrlama getirmez.
-Mateusz "Fox" Viste'ye Unicode yaztipleri i‡in teŸekkrler.
-Bu program GNU/GPL lisans kapsamnda ”zgr ve a‡k kaynakl
-olarak yaynlanmŸtr<SF>
+Bu program GNU/GPL lisansÄ± kapsamÄ±nda Ã¶zgÃ¼r ve aÃ§Ä±k kaynaklÄ±
+olarak yayÄ±mlanmÄ±ÅŸtÄ±r<SF>
 #vyber_filtr
-D”nŸm szgeci se‡
+DÃ¶nÃ¼ÅŸÃ¼m sÃ¼zgeci seÃ§
 #to_uz_utf8_je
-Bu dosya zaten Unicode ile kodlanmŸ.
-D”nŸtrmeye gerek yok.
+Bu dosya zaten Unicode kullanmaktadÄ±r.
+DÃ¶nÃ¼ÅŸÃ¼m anlamsÄ±z.
 #neni_v_utf8
-Bu dosya Unicode ile kodlanmamŸ.
+Bu dosya Unicode kodlamasÄ±nÄ± kullanmamaktadÄ±r
 #nezname_na_otaznik
-Bilinmeyen karakterlerin yerine "?" koyulsun mu?
+Bilinmeyen karakterlerin yerine "?" koyulmasÄ±nÄ± istiyor musunuz?
 #parametr_otaznik
-S”zdizim:
+SÃ¶zdizim:
 BLOCEK [dosya1 [,dosya2 [,...]]]
-#zoom
-tam ekran
+#ovladani_obrazku
+tam ekran*o<<>>O*+90*-90*dikey*yatay*Exif verileri
 #zoom_info
-Resimleri ekrann tamamnda g”rntler.
-#plus90
-+90›
+Resimleri tÃ¼m ekranda gÃ¶ster
+#obrorig_info
+TÃ¼m gÃ¶rÃ¼ntÃ¼yÃ¼ ekranda gÃ¶rÃ¼ntÃ¼lemek iÃ§in orijinal boyut ile en uygun boyut arasÄ±nda geÃ§iÅŸ yap
 #plus90_info
-resmi saat y”nnde 90 derece d”ndrr
-#minus90
--90›
+resmi saat yÃ¶nÃ¼nde 90 derece dÃ¶ndÃ¼r
 #minus90_info
-resmi saat y”nnn tersine 90 derece d”ndrr
+resmi saat yÃ¶nÃ¼nÃ¼n tersine 90 derece dÃ¶ndÃ¼r
+#fliphorz_info
+Yatay olarak Ã§evir
+#flipvert_info
+Dikey olarak Ã§evir
+#exifdata_info
+EXIF etiketinden veri gÃ¶sterir (bazÄ± JPEG dosyalarÄ±nda mevcuttur)
 #chyba
 Hata!
 #soubor_nebyl_ulozen
 Dosya kaydedilmedi!
-Srcde yeterli yer yok veya src salt okunur.
-#fliphorz
-yatay
-#flipvert
-dikey
-#fliphorz_info
-Yatay olarak ‡evirir
-#flipvert_info
-Dikey olarak ‡evirir
+SÃ¼rÃ¼cÃ¼de yeterli yer yok veya
+sÃ¼rÃ¼cÃ¼ saltokunur
+#informace_exif
+Exif information
+#exif_date_strs
+Tarih ve zaman:          *Orijinalin tarih ve zamanÄ±:*FotoÄŸrafÄ±n tarih ve zamanÄ±:
+#exif_camera_info
+Kamera Ã¼reticisi:*Kamera modeli:*AÃ§Ä±klama:*YazÄ±lÄ±m:*IÅŸÄ±k kaynaÄŸÄ±:*FlaÅŸ:*Maruziyet kipi:*ISO:*Maruziyet zamanÄ±:*YÃ¶nelim:*YakÄ±nlaÅŸtÄ±rma:
+#exif_lightsrc_info
+Bilinmiyor*GÃ¼n Ä±ÅŸÄ±ÄŸÄ±*Floresan*Tungsten*FlaÅŸ*Standart IÅŸÄ±k A*Standart IÅŸÄ±k B*Standart IÅŸÄ±k C*D55*D65*D75*DiÄŸer*Bilinmiyor
+#exif_flash_info
+FlaÅŸ Yok*FlaÅŸ*FlaÅŸ Stroboskopik deÄŸil*Stroboskopik FlaÅŸ*FlaÅŸ (Otomatik)*FlaÅŸ Yok*Bilinmiyor
+#exif_expos_mode
+Bilinmiyor*Elle kontrol*Normal Program*Diyafram Ã–nceliÄŸi*DeklanÅŸÃ¶r Ã¶nceliÄŸi*YaratÄ±cÄ± Program*Aksiyon ProgramÄ±*Portre Kipi*Peyzaj Kipi*Bilinmiyor
+#exif_orientation_desc
+Normal*Yatay ayna*180 dÃ¶ndÃ¼rÃ¼lmÃ¼ÅŸ*Dikey ayna*90 sola dÃ¶ndÃ¼rÃ¼lmÃ¼ÅŸ ve ayna*SaÄŸa 90 dÃ¶ndÃ¼rÃ¼lmÃ¼ÅŸ*SaÄŸa 90 dÃ¶ndÃ¼rÃ¼lmÃ¼ÅŸ ve ayna*Sola 90 dÃ¶ndÃ¼rÃ¼lmÃ¼ÅŸ*Bilinmiyor
+#exif_zoom_unused
+KullanÄ±lmamÄ±ÅŸ
+#exif_GPS_info
+GPS bilgisi*enlem:*boylam:*rakÄ±m:*azimut*K*G*B*D*m*Ã¸*Ã¯*Ã±
+#zkopirovat_exif
+Panoya
 #nejde_o_obrazek
 Dosya bozuk veya resim verileri
-desteklenen bi‡imde de§il
-Dosya metin olarak a‡lacaktr.
+desteklenen biÃ§imde deÄŸil
+Dosya metin olarak aÃ§Ä±lacaktÄ±r.
 #nelze_fixovat_zalamani
-Bu iŸlev sadece s”zck kaydrma
-kipinde kullanlabilir
+Bu iÅŸlev sadece sÃ¶zcÃ¼k kaydÄ±r
+kipinde kullanÄ±labilir
 #vyhledavani
 Bul
 #rezim_vyhled
 <POZADI=1147;BARVA=65535>arama kipi<POZADI=->
 #vyhled_mozn
-imle‡ten
+imleÃ§ten
 imlece
-baŸlang‡tan
+baÅŸlangÄ±Ã§tan
 #roz_vel_pismen
-BšYšK/k‡k harf duyarl
+Case sensitive
 #mapa_shodnosti
-BšYšK/k‡k harf eŸlemesi:
+Karakter durum eÅŸlemesi:
 #hl_unicode
 <BARVA=65535>Unicode<SB>
 #text_nenalezen
-Se‡ili metin bulunamad.
+SeÃ§ili metin bulunamadÄ±.
 #nahradit_vyskyt
-Bu oluŸum de§iŸtirilsin mi?
+Bu oluÅŸum deÄŸiÅŸtirilsin mi?
 #potvrzovat
 teyit
 #nahradvse
-tmn de§iŸtir
+tÃ¼mÃ¼nÃ¼ deÄŸiÅŸtir
 #hledany_text
 Bulunacak metin
 #novy_text
 Yeni metin
 #nahrada_textu
-De§iŸtir
+DeÄŸiÅŸtir
 #vyber_filtr
-Resim filtresi se‡
+Resim sÃ¼zgeci seÃ§
 #opravdu_zavrit
-Dosya de§iŸtirildi.
+Dosya deÄŸiÅŸtirildi.
 Kaydedilsin mi?
 #bezejmenny
 <BARVA=46815><<yeni dosya>><SB>
 #bezejmenny_soubor
 Yeni dosya
 #nacitam
-Ykleniyor...
+YÃ¼kleniyor...
 #prer_esc
-˜ptal i‡in <<ESC>>
+Ä°ptal iÃ§in <<ESC>>
 #zrusit_nac
-Ykleme iptal edilsin mi?
+YÃ¼kleme iptal edilsin mi?
 #chybi_bcfg
-<BARVA=65535>BLOCEK.CFG<SB> dosyas eksik.
-™ntanml Ÿu dosyadan oluŸturulacak:
+<BARVA=65535>BLOCEK.CFG<SB> dosyasÄ± eksik.
+VarsayÄ±lan dosyadan oluÅŸturulacak
 <BARVA=65535>DEFAULT.CFG<SB>
 #chybny_bcfg
-<BARVA=65535>BLOCEK.CFG<SB> dosyas ge‡erli bi‡imde de§il.
-u dosyadan onu oluŸturaca§m
+<BARVA=65535>BLOCEK.CFG<SB> dosyasÄ± geÃ§erli biÃ§imde deÄŸil.
+Åu dosyadan onu oluÅŸturacaÄŸÄ±m
 <BARVA=65535>DEFAULT.CFG<SB>
 #pridani_bcfg
-<BARVA=65535>BLOCEK.CFG<SB> dosyasna Ÿu de§iŸkenler eklendi:
+<BARVA=65535>BLOCEK.CFG<SB> dosyasÄ±na ÅŸu deÄŸiÅŸkenler ilave edildi:
 #pocet_zmen
-de§iŸiklikler:
-#pametinfo
-Bu iŸlev henz eklenmemiŸtir :-(
+deÄŸiÅŸiklikler:
 #neniswap
-Sisteminiz sanal belle§i desteklememektedir!
-Bu, tm RAM belle§in kullanld§ durumlarda tehlikeli olabilir.
-BaŸka bir DPMI sunucusu kullanmay deneyin.
-u anda Ÿunu kullanmaktasnz:
+Sisteminiz sanal bellek desteklememektedir!
+Bu, tÃ¼m RAM belleÄŸin kullanÄ±ldÄ±ÄŸÄ± durumlarda tehlikeli olabilir.
+BaÅŸka bir DPMI sunucusu kullanmayÄ± deneyin.
+Åu anda ÅŸunu kullanmaktasÄ±nÄ±z:
 #dpmineznamy
 <BARVA=333>bilinmeyen DPMI sunucusu :-(<SB>
 #kaslinaswap
-(Bu denetimi BLOCEK.CFG dosyasnda Ÿu ayar kullanarak devre dŸ brakabilirsiniz:
+(Bu denetimi BLOCEK.CFG dosyasÄ±nda ÅŸu ayarÄ± kullanarak devre dÄ±ÅŸÄ± bÄ±rakabilirsiniz:
 <BARVA=65530>zkontroluj_swap = 0<SB>)
 #plnyseznam
 Tam liste...
 #vybprefkl
-Ana mende hangi klavyeler olmaldr?
+Ana menÃ¼de hangi klavyeler olmalÄ±dÄ±r?
 #vybprefflt
-Ana mende hangi szge‡ler olmaldr?
+Ana menÃ¼de hangi sÃ¼zgeÃ§ler olmalÄ±dÄ±r?
 #asciihelp
-Unicode metinler i‡in ASCII d”nŸmler kullanlamaz
+Unicode metinler iÃ§in ASCII dÃ¶nÃ¼ÅŸÃ¼mler kullanÄ±lamaz
 #asciiauto
-otomatik algla
+otomatik algÄ±la
 #asciiautovaruj
-Otomatik alglama her zaman %100 gvenilir olmaz.
-Srdrelim mi?
+Otomatik algÄ±lama her zaman %100 gÃ¼venilir olmaz.
+SÃ¼rdÃ¼rmeli miyim?
 #vkod
 <PODTRH=+>kaynak<PODTRH=->
 #ckod
 <PODTRH=+>hedef<PODTRH=->
 #oznaceno
-se‡ili:
+seÃ§ili:
 #ozn_nic
-hi‡bir Ÿey
-#procesor
-˜Ÿlemci:
-#pamet
-Bellek:
-#mb_ram
-MB RAM
-#video
-Video
-#videopamet
-Video belle§i
-#verzevesa
-VESA srm:
-#videomod
-Video kipi:
-#refreshfq
-Tazeleme frekans:
-#verzedosu
-DOS srm:
-#biosdefault
-BIOS ”ntanmls
-
+hiÃ§bir ÅŸey
+#kompinfo
+Yonga:*Bellek:*MB RAM*Video:* VESA sÃ¼rÃ¼mÃ¼:*Video kipi:*Video belleÄŸi*Tazeleme frekansÄ±:*BIOS varsayÄ±lanÄ±*DOS sÃ¼rÃ¼mÃ¼:
+#schranka_c
+Pano No
+#schranka_do
+Panoya kopyala
+#schranka_ze
+Panodan yapÄ±ÅŸtÄ±r
+#schranka_copy
+BaÅŸka bir panoya kopyala
+#schranka_smaz
+Sil
+#vyber_jazyk
+Dil seÃ§in
+#nutny_restart
+DeÄŸiÅŸikliÄŸin etkili olmasÄ± iÃ§in programÄ± yeniden baÅŸlatmalÄ±sÄ±nÄ±z.
+#prevod_html_entity
+HTML unsurlarÄ±na dÃ¶nÃ¼ÅŸÃ¼m
+#prevod_html_ent_info
+ASCII veya Unicode deÄŸeri 255 Ã¼zeri olan karakterler
+HTML unsurlarÄ±na dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lecektir.
+DÃ¶nÃ¼ÅŸÃ¼mÃ¼n kapsamÄ± blok tarafÄ±ndan belirlenir.
+#text_je_v_unicode
+Metin Unicode kodlamasÄ±ndadÄ±r.
+#text_je_v_ascii
+Metin ASCII kodlamasÄ±ndadÄ±r ve dÃ¶nÃ¼ÅŸÃ¼m
+bir dÃ¶nÃ¼ÅŸÃ¼m tablosu kullanÄ±larak yapÄ±lacaktÄ±r.
+#neni_oz_blok
+HiÃ§bir metin bloku seÃ§ilmemiÅŸtir, dolayÄ±sÄ±yla dÃ¶nÃ¼ÅŸÃ¼m
+tÃ¼m metni kapsayacaktÄ±r.
+#prevod_mala_velka
+BÃ¼yÃ¼k harfe dÃ¶nÃ¼ÅŸtÃ¼r
+#prevod_mala_velka_inf
+Bloktaki harfleri bÃ¼yÃ¼k harflere dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r.
+DiÄŸer karakterlere dokunmaz.
+#prevod_velka_mala
+KÃ¼Ã§Ã¼k harfe dÃ¶nÃ¼ÅŸtÃ¼r
+#prevod_velka_mala_inf
+Bloktaki harfleri kÃ¼Ã§Ã¼k harflere dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r.
+DiÄŸer harflere dokunmaz.

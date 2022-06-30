@@ -1,8 +1,8 @@
 *******************************************************************************
 FreeDOS Installer German Translation.
-Provided by: Christian Imhorst
-Contact Email: christian.imhorst@gmail.com
-Created/Modified: 01/15/2016
+Provided by: Christian Imhorst, Wilhelm Spiegl
+Contact Email: christian.imhorst@gmail.com,
+Created/Modified: 01/15/2016, modified 2022-01-19 by W. Spiegl, added HELLO_WARN.1+2+$LANG_SETLIST$,removed LANG_LIST, modified line 33 once again.
 Released Under GPL v2.0 License.
 *******************************************************************************
 
@@ -15,27 +15,30 @@ TITLE=/s- /f %1 "%2 " /f %3 "%4" /f %1 " Installationsprogramm"
 
 # STAGE300 - Initial welcome screen message
 LANG_ASK="Bitte Sprache auswÑhlen."
+# LANG_LIST=/r4/c32 'Englisch' /e/p/r4/c32 'Deutsch' /e/p/r4/c32 'Esperanto' /e/p/r4/c32 'Spanisch' /e/p/r4/c32 'Franzîsisch' /e/p/r4/c32 'NiederlÑndisch' /e/p/r4/c32 'Russisch' /e/p/r4/c32 'TÅrkisch' /e
 $LANG_SETLIST$
 LANG_EN=Englisch
 LANG_ES=Spanisch
 LANG_FR=Franzîsisch
-LANG_DE=Deutsche
+LANG_DE=Deutsch
 LANG_EO=Esperanto
 LANG_NL=NiederlÑndisch
 LANG_TR=TÅrkisch
 LANG_RU=Russisch
+LANG_SV=Schwedisch
 
-HELLO_FRAME=/w70 /h11 /c
+HELLO_FRAME=/w70 /h16 /c
 HELLO_OPTS=/w40 /h5 /c
 HELLO=/s- "Willkommen zum Installationsprogramm fÅr " /f %1 "%2" /f %3 .
 HELLO_ADV=/s- "Willkommen zum erweiterten Installationsprogramm fÅr " /p /f %1 "%2" /f %3 .
-HELLO_WARN.1=
+HELLO_WARN.1=/f%1 "%2" /f%3 "ist ein vollstÑndiges Betriebssystem. Wenn Sie dieses" /p "auf Ihrem Computer installieren mîchten, werden Sie das" /p "aktuelle Betriebssystem öBERSCHREIBEN (z.B. Windows)." /p "Wenn Sie das nicht mîchten," /BlinkOn /f%4 "beenden Sie bitte JETZT!" /f%3 /BlinkOff /p /p
 HELLO_WARN.2=
 HELLO_WARN.3=
 HELLO_WARN.4=
 HELLO_WARN.5=
+
 PROCEED?="Mîchten Sie fortfahren?"
-CONTINUE="  Ja   - Weiter mit Installation."
+CONTINUE="  Ja   - Weiter mit der Installation."
 EXIT="  Nein - ZurÅck zu DOS."
 
 # STAGE400 - Partition screen specific
@@ -44,8 +47,7 @@ NOPART_OPTS=/w40 /h5 /c
 NOPART=/s- "Laufwerk " /f  %1 %2 /f %3 " scheint nicht partitioniert zu sein."
 PART?="Soll das Laufwerk partitioniert werden?"
 PART_YES="  Ja - Laufwerk partitionieren."
-PARTING_FRAME=/w42 /h5 /c
-PARTING="Partitionieren der Festplatte..."
+# EXIT
 
 # STAGE400 - After partitioned specific
 PARTED_FRAME=/w62 /h11 /c
@@ -55,6 +57,8 @@ REBOOT?="Soll jetzt neu gestartet werden?"
 REBOOT_YES="  Ja - Bitte jetzt neu starten."
 # EXIT
 REBOOT="Der Computer sollte jetzt neu starten."
+PARTING_FRAME=/w42 /h5 /c
+PARTING="Partitionieren der Festplatte..."
 
 # STAGE500 - Formating specific
 NOFORMAT_FRAME=/w55 /h10 /c
@@ -64,8 +68,8 @@ NOFORMATADV_OPTS=/w65 /h6 /c
 NOFORMAT=/s-  "Laufwerk " /f %1 %2 /f %3 " scheint nicht formatiert zu sein."
 FORMAT?="Soll das Laufwerk formatiert werden?"
 FORMAT_YES="  Ja - Bitte lîsche und formatiere Laufwerk %1."
-FORMATADV_QUICK="  Ja - Schnelles lîschen und formatieren von Laufwerk %1."
-FORMATADV_SLOW="  Ja - VollstÑndiges lîschen und formatieren von Laufwerk %1."
+FORMATADV_QUICK="  Ja - Schnelles Lîschen und Formatieren von Laufwerk %1."
+FORMATADV_SLOW="  Ja - VollstÑndiges Lîschen und Formatieren von Laufwerk %1."
 # EXIT
 FORMATTING=/s- /fGray "Formatiere Laufwerk " /fWhite %1 /fGray ...
 PAUSE=/fLightGreen " DrÅcken Sie eine beliebige Taste... " /e
@@ -135,12 +139,12 @@ ERROR_REMOS="Problem beim Lîschen alter Systemdateien."
 ERROR_XSYS="Fehler beim Kopieren der Systemdateien nach %1."
 ERROR_CONFIG="Problem beim Kopieren neuer Konfigurationsdateien."
 
-REBOOT_PAUSE=/f%1/c32 Entfernen Sie das Installationsmedium und drÅcken Sie eine Taste, um neu zu /p/e/c32 starten, oder /f%2 STRG+C /f%1 zum beenden...
-REBOOT_FRAME=/w70 /h8 /c
-REBOOT_WARN.1=Please note that you did not force an update of your MBR boot /p code. If
-REBOOT_WARN.2=/c32 you system fails to boot /s- /c32 /f%1 "%2" /f%3 , /s+ please reboot /p
-REBOOT_WARN.3=using the install media and run "'" /s- /f%1 MBRZAP.BAT /f%3 "'" /s+ to
-REBOOT_WARN.4=/c32 force new /p boot code to the MBR.
+REBOOT_PAUSE=/f%1/c32 Entfernen Sie das Installationsmedium und drÅcken Sie eine Taste, /p/e/c32 um neu zu starten, oder /f%2 STRG+C /f%1 zum Beenden...
+REBOOT_FRAME=/w72 /h10 /c
+REBOOT_WARN.1=Bitte beachten Sie, da· Sie kein Update Ihres MBR Bootcodes /p erzwungen haben.
+REBOOT_WARN.2=/c32 Wenn Ihr System /s- /c32 /f%1 "%2" /f%3 nicht bootet, /s+ booten Sie neu. /p
+REBOOT_WARN.3=Verwenden Sie das Installationsmedium und starten "'" /s- /f%1 MBRZAP.BAT /f%3 "'" /p
+REBOOT_WARN.4=/c32 um einen neuen MBR Bootcode zu erhalten.
 REBOOT_WARN.5=
 
 # AUTOEXEC.BAT messages
@@ -148,62 +152,63 @@ AUTO_DONE=Erfolgreiche AusfÅhrung der Startdateien /fCyan %1 /a7 und /fCyan %2 /
 AUTO_HELP=Geben Sie /fWhite %1 /fGray ein, um UnterstÅtzung bei Befehlen und der Navigation zu /p erhalten.
 AUTO_WELCOME=Willkommen zum /fGreen %1 /fCyan %2 /fGray Betriebssystem ( /s- /fYellow "%3" /fGray )
 
+
+# FDASK000 - Select Keyboard Layout
+
 # FDASK100 - Reserved
 KBS_FRAME=/w55 /h16 /c
 KBS_OPTS=/w38 /h12 /c
 KBS?=Bitte wÑhlen Sie Ihre Art der Tastatur.
 KBO.1=" US-Englisch (Standard)" /p " UK Englisch" /p " Spanisch" /p " Franzîsisch" /p
-KBO.2=" Deutsche" /p " Niederlande " /p " TÅrkisch "
-KBM=/p/p " Mehr Tastatur Auswahl..."
-KBL=" Weniger Tastatur Auswahl..."
+KBO.2=" Deutsch" /p " Niederlande " /p " TÅrkisch "
+KBM=/p/p " Mehr Tastaturauswahl..."
+KBL=" Weniger Tastaturauswahl..."
 KBA_FRAME=/w58 /h13 /c
 
 # FDASK200 - Backup old OS
 BACKUP_FRAME=/w70 /h10 /c
-BACKUP_OPTS=/w46 /h5 /c
+BACKUP_OPTS=/w52 /h5 /c
 BACKUPADV_FRAME=/w70 /h11 /c
-BACKUPADV_OPTS=/w50 /h6 /c
+BACKUPADV_OPTS=/w52 /h6 /c
 BACKUP=Es wurde ein Betriebssystem erkannt auf Laufwerk /f %1 %2 /f %3 /s- .
 BACKUP?=Mîchten Sie die Daten sichern, bevor die Installation beginnt?
-BACKUPY="  Ja - Bitte Daten sichern."
-BACKUPZ="  Ja - Bitte Daten in einem Zip-Archiv sichern."
+BACKUPY="  Ja   - Bitte Daten sichern."
+BACKUPZ="  Ja   - Bitte Daten in einem Zip-Archiv sichern."
 BACKUPN="  Nein - Installiere ohne Datensicherung."
 
 # FSASK100 - Advanced mode
-TARGET_FRAME=/w50 /h7 /c
+TARGET_FRAME=/w62 /h7 /c
 TARGET?=Soll das Zielverzeichnis der Installation geÑndert werden?
 TARGET_ASK=/f %1 /b %2 /d %3 %4
 
 # FDASK300 - Advanced mode Replace system files
 REPLACE_FRAME=/w70 /h8 /c
-REPLACE_OPTS=/w60 /h5 /c
+REPLACE_OPTS=/w64 /h5 /c
 REPLACE?=Sollen die Konfigurationsdateien des Systems ersetzt werden?
-REPLACEY="  Ja - Kopiere neue Konfigurationsdateien."
+REPLACEY="  Ja   - Kopiere neue Konfigurationsdateien."
 REPLACEN="  Nein - Behalte die alten Konfigurationsdateien."
 
 # FDASK400 - Advanced mode delete old OS files
 DELETE_FRAME=/w66 /h8 /c
 DELETE_OPTS=/w52 /h5 /c
 DELETE?=Lîsche alle alten Dateien von /f %1 %2 /f %3 /s- ?
-DELETEY="  Ja - Starte mit einer frischen Installation."
+DELETEY="  Ja   - Starte mit einer frischen Installation."
 DELETEN="  Nein - Lasse die alten Dateien wo sie sind."
 
 # FDASK500 - Advanced mode transfer system files
 XFER_FRAME=/w55 /h8 /c
 XFER_OPTS=/w42 /h5 /c
 XFER?=Kopiere Systemdateien von Laufwerk /f %1 %2 /f %3 /s- ?
-XFERY="  Ja  - Kopiere Systemdateien."
+XFERY="  Ja   - Kopiere Systemdateien."
 XFERN="  Nein - Keine Systemdateien kopieren."
 
-# FDASK600 - Advanced mode force new boot sector
-OBSS_FRAME=/w60 /h8 /c
+OBSS_FRAME=/w64 /h8 /c
 OBSS_OPTS=/w36 /h5 /c
-# vecho "Force new boot sector code on dive C:?"
-OBSS?=Erzwingen neuen Bootsektor auf dem Laufwerk /f %1 %2 /f %3 (%4:%5)?
-OBSSY="  Ja   - öberschreiben MBR."
+OBSS?=Erzwinge neuen Bootsektorcode auf dem Laufwerk /f %1 %2 /f %3 (%4:%5)?
+OBSSY="  Ja   - MBR öberschreiben."
 OBSSN="  Nein - Nicht mit Gewalt."
 
-# FDASK700 - Package group selection.
+# FDASK600 - Package group selection.
 PAC_FRAME=/w72 /h11 /c
 PAC_OPTS=/w52 /h8 /c
 PAC_FRAME_B=/w72 /h8 /c
@@ -249,7 +254,7 @@ ICLEAN="Lîsche alte Konfigurationsdateien."
 ICLEAN_DONE="Alte Konfigurationsdateien wurden gelîscht."
 
 # Transfer system files
-IXSYS_FRAME=/w64 /h5 /c
+IXSYS_FRAME=/w66 /h5 /c
 IXSYS= /s- "Kopiere Systemdateien fÅr den Start nach Laufwerk " /f %1 %2 /f %3 .
 IXSYS_DONE="Systemdateien wurden kopiert."
 
@@ -270,4 +275,3 @@ ICONFIGS_DONE="Neue Konfigurationsdateien wurden installiert."
 # Virtual machine not supported with this install media.
 NORUN.1=Leider ist dieses Verfahren der Installation auf dieser Hardwareplattform
 NORUN.2=/p nicht unterstÅtzt. Bitte versuchen Sie einen anderen Installationsmethode.
-

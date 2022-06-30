@@ -1,12 +1,12 @@
 ; English Langauge Resource and Translation File
-
+; changes by W. Spiegl: added %0 and %1 in line 84
 ; note %_ is a space, %% is percent, %r is CRLF,
 ; %0-F (1 char hex) are params, % alone is next param.
 ; Items that start VERB_ are Verbose mode versions.
 
 LANGUAGE=en
 TITLE=%, Version %
-COPYRIGHT=Copyright (c) 2019-2020, Jerome Shidel
+COPYRIGHT=Copyright (c) 2019-%, Jerome Shidel
 
 ; Same params as reporting
 INC_FILE=%9%2 %8
@@ -14,7 +14,9 @@ INC_CONT=%2 (continued)
 INC_DIR=%2
 INC_TEXT=embed text: %2 %8
 INC_HEAD=text: %2 %8
+USE_COMP=enabled %0 compression pass-through
 
+VERB_PRE_SCAN=scanned % items to add to archive
 VERB_INC_FILE=include: %9%2 (%A)\[%3] %8
 VERB_INC_CONT=continue: %2 [%3] (continued from offset %6)
 VERB_INC_DIR=subdir: %2 (%3)
@@ -79,7 +81,7 @@ SAF_CAT=Set archive category %
 SAF_SLICING=Slicing archive at %
 VERB_SAF_IUP=Update statistical information for archive %
 
-MEDIA=Insert diskette containing file % in drive %.
+MEDIA=Insert diskette containing file %0 in drive %1.
 PAUSE=Press any key to continue.
 
 PROMPT_YES=Yes
@@ -136,6 +138,10 @@ HELP_35=  %0L ?      override system default language
 HELP_36=  %0m ?      embed message text from file
 HELP_37=  %0M ?      embed message text from file that requires a user to agree
 HELP_38=
+HELP_39=Pass-through compression:
+HELP_40=
+HELP_41=  %0p ?      Enable pass-through compression (GZ, maybe others later)
+HELP_42=
 
 ; Reserved for future use
 ; HELP_00=  %0u        update existing archive
@@ -156,6 +162,8 @@ BAD_MAX=Maximum archive slice count exceeded for "%1"
 BAD_VER=Archive "%1" may contain unsupported data structures.
 BAD_EMB=Can only specify one message text file at a time.
 BAD_MSG=Message note "%1" too big. Truncated to %2.
+BAD_CMP=Unsupported compression pass-through "%2"
+BAD_TMP=TEMP directory required.
 ER_UNK=error code #%0, unspecified error with "%1" %2
 ER_2=File "%1" was not found.
 ER_3=Path of file "%1" was not found.

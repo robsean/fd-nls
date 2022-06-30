@@ -1,4 +1,4 @@
-; English Langauge Resource and Translation File
+; Turkish Langauge Resource and Translation File
 
 ; note %_ is a space, %% is percent, %r is CRLF
 ; %0-F (1 char hex) are params, % alone is next param.
@@ -6,7 +6,7 @@
 
 LANGUAGE=tr
 TITLE=%, Sürüm %
-COPYRIGHT=Telif hakkı (c) 2019-2020, Jerome Shidel
+COPYRIGHT=Telif hakkı (c) 2019-%, Jerome Shidel
 
 ; Same params as reporting
 INC_FILE=%9%2 %8
@@ -14,7 +14,9 @@ INC_CONT=%2 (sürdürüldü)
 INC_DIR=%2
 INC_TEXT=gömülü metin: %2 %8
 INC_HEAD=metin: %2 %8
+USE_COMP=%0 sıkıştırma geçişi etkinleştirildi
 
+VERB_PRE_SCAN=%s öge arşive eklenmek için tarandı
 VERB_INC_FILE=içer: %9%2 (%A)\[%3] %8
 VERB_INC_CONT=sürdür: %2 [%3] (%6 numaralı ofsetten sürdürüldü)
 VERB_INC_DIR=altdizin: %2 (%3)
@@ -44,7 +46,7 @@ VERB_EXT_SKIP=%9%2 dosyası mevcut, atlandı
 ; %4 öznitelikler   (dizin ve dosya öznitelikleri veya metin sözlülük düzeyi)
 ; %5 zaman damgası  (yalnızca metin ve dosya)
 ; %6 dosya ofseti   (yalnızca dosya)
-; %7 dosya baytları (yalnızca dosya)
+; %7 dosya baytı    (yalnızca dosya)
 ; %8 toplam dosya boyutu (yalnızca dosya ve metin)
 ; %9 yol            (yalnızca dosya)
 ; %A yol kimliği    (yalnızca dosya)
@@ -88,7 +90,7 @@ PROMPT_Y=E
 PROMPT_N=H
 PROMPT_OVER=Üzerine yazılsın mı: %2%1, %0?
 PROMPT_ACCEPT=Kabul et: %?
-PROMPT_STOP=%1 dosyası hasarlı. %0 çıkartması iptal edilsin mi?
+PROMPT_STOP=%1 dosyası hasarlı. %0 çıkarması iptal edilsin mi?
 
 SUMMARY=%0 dilim, %1 dizin, %2 dosya, %3
 
@@ -119,7 +121,7 @@ HELP_18=  %0g ?      grup kategorisini belirt
 HELP_19=  %0s ?      dilimlenecek arşiv boyutu; K, M veya bayt (yalnızca yeni bir
 HELP_20=             arşiv oluştururken veya var olan arşivi dilimlerken geçerli)
 HELP_21=
-HELP_22=  %0y        herhangi bir istemi kendiliğinden kabul it (üzerine yazım hariç)
+HELP_22=  %0y        herhangi bir istemi kendiliğinden kabul et (üzerine yazım hariç)
 HELP_23=
 HELP_24=Arşiv işlemleri
 HELP_25=
@@ -136,6 +138,10 @@ HELP_35=  %0L ?      sistem öntanımlı dilini geçersiz kıl
 HELP_36=  %0m ?      dosyadan ileti metnini göm
 HELP_37=  %0M ?      kullanıcı onayı gereken bir dosyadan ileti metnini göm
 HELP_38=
+HELP_39=Sıkıştırma geçişi:
+HELP_40=
+HELP_41=  %0p ?      Sıkıştırma geçişini etkinleştir (GZ, diğerleri belki
+HELP_42=             daha sonra)
 
 ; Reserved for future use
 ; HELP_00=  %0u        mevcut arşivi güncelle
@@ -156,6 +162,8 @@ BAD_MAX="%1" için en fazla arşiv dilim sayısı aşıldı
 BAD_VER="%1" arşivi yalnızca desteklenmeyen veri yapıları içerebilir
 BAD_EMB=Tek bir kerede yalnızca bir ileti metni belirtilebilir
 BAD_MSG="%1" ileti notu pek büyük. %2 olarak kısaltıldı.
+BAD_CMP=Desteklenmeyen sıkıştırma geçişi "%2"
+BAD_TMP=TEMP dizini gerekli.
 ER_UNK=hata kodu #%0, "%1" ile belirtilmeyen hata %2
 ER_2="%1" dosyası bulunamadı
 ER_3="%1" dosyasının yolu bulunamadı.

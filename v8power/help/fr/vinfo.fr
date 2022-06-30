@@ -52,4 +52,9 @@ elles, elles pourraient ˆtre transf‚r‚es vers leurs propres utilitaires.
     /U chaŒne   Rechercher la chaŒne de fa‡on insensible … la casse dans la
                 m‚moire (a000:0000 et plus)
 
+    /J pos *    Retourner la valeur ASCII du caractŠre … la position pos sur le
+    			restant de la ligne de commande en tant que niveau d'erreur. 0
+    			est retourn‚ si la position n'est pas trouv‚e.
+    /K pos *	Identique … /J mais converti en majuscules d'abord.
+
                (Toujours en d‚veloppement, plus … venir)

@@ -2,7 +2,7 @@
 FreeDOS 1.2 Installer French Translation.
 Provided by: Paul Dufresne
 Contact Email: dufresnep@gmail.com
-Created/Modified: November 10, 2016
+Created/Modified: February 3rd, 2021
 Released Under GPL v2.0 License.
 *******************************************************************************
 
@@ -15,6 +15,7 @@ TITLE=/s- /f %1 "%2 " /f %3 "%4" /f %1 " Installateur"
 
 # STAGE300 - Before welcome screen if LANG is not set and could not be detected.
 LANG_ASK="Veuillez choisir votre langue."
+$LANG_SETLIST$
 LANG_EN=Anglais
 LANG_ES=Espagnol
 LANG_FR=Français
@@ -23,7 +24,7 @@ LANG_EO=Espéranto
 LANG_NL=Hollandais
 LANG_TR=Turc
 LANG_RU=Russe
-# add this language if needed.
+LANG_SV=Suédois
 
 # STAGE300 - Initial welcome screen message.
 HELLO_FRAME=/w68 /h16/c
@@ -167,7 +168,7 @@ AUTO_WELCOME="Bienvenue au système d'exploitation" /fGreen %1 /fCyan %2 /fGray 
 KBS_FRAME=/w55 /h16 /c
 KBS_OPTS=/w38 /h12 /c
 KBS?="Veuillez sélectionner votre disposition" /p "de clavier."
-KBO.1=" US Anglais (par défaut)" /p " UK Anglais" /p " Espagnol" /p " Français" /p " Allemand" /p
+KBO.1=" Anglais des États-Unis (par défaut)" /p " Anglais du Royaume-Uni" /p " Espagnol" /p " Français" /p " Allemand" /p
 KBO.2=" Allemand (autre clavier)" /p " Hollandais"
 KBM=/p/p " Plus de choix de clavier..."
 KBL=" Moins de choix de clavier..."
@@ -231,13 +232,13 @@ PAC_OPTS_D=/w66 /h11 /c
 PAC_FRAME_BD=/w74 /h11 /c
 PAC_OPTS_BD=/w66 /h8 /c
 # vecho "What FreeDOS packages do you want to install?"
-PACS?=Quels paquetages /f %1 %2 /f %3 désirez-vous installer ?
-PACBO="  Uniquement les paquetages essentiels."
-PACBS="  Uniquement les paquetages essentiels avec leur code source."
-PACAO="  Tous les paquetages."
-PACAS="  Tous les paquetages incluant leur code source."
-PACDO_ADV="  Un choix personnel de paquetages binaires."
-PACDS_ADV="  Un choix personnel de paquetages incluant leur code source."
+PACS?=Quels paquets /f %1 %2 /f %3 désirez-vous installer ?
+PACBO="  Uniquement les paquets essentiels."
+PACBS="  Uniquement les paquets essentiels avec leur code source."
+PACAO="  Tous les paquets."
+PACAS="  Tous les paquets incluant leur code source."
+PACDO_ADV="  Un choix personnel de paquets binaires."
+PACDS_ADV="  Un choix personnel de paquets incluant leur code source."
 
 # FDASK700 - Reserved
 
@@ -255,7 +256,7 @@ IBACKUP_DONE=/f %1 Sauvegarde terminée.
 
 # Old Package removal
 IRMPACK_FRAME=/w60 /h7 /c
-IRMPACKS=Suppression des anciens paquetages en conflit.
+IRMPACKS=Suppression des anciens paquets en conflit.
 # vecho "Removing old 'base/append' package."
 IRMPACKN=/s- "Suppression du paquet ancien '" /f %1 %2 /f %3 "'."
 
@@ -271,19 +272,19 @@ ICLEAN="Nettoyage des anciens fichiers de configuration en cours."
 ICLEAN_DONE="Nettoyage des anciens fichiers de configuration terminé."
 
 # Transfer system files
-IXSYS_FRAME=/w60 /h5 /c
+IXSYS_FRAME=/w64 /h5 /c
 # vecho "Transferring system boot files to drive C:."
 IXSYS= /s- "Copie des fichiers d'amorçage système vers le disque " /f %1 %2 /f %3 .
 IXSYS_DONE="Copie des fichiers système terminée."
 
 # Package installation.
 IPAC_FRAME=/w60 /h7 /c
-IPACBM="Installation des paquetages."
+IPACBM="Installation des paquets."
 IPACBI=/s- "Installation du paquet '" /f %1 %2 /f %3 "'"
 IPACSM="Installation des codes source."
 IPACSI= /s- "Installation des codes source de '" /f %1 %2 /f %3 "'"
 IPACDONE_FRAME=/w46 /h5 /c
-IPACDONE="Installation des paquetages terminée."
+IPACDONE="Installation des paquets terminée."
 
 # Config file installation
 ICONFIGS_FRAME=/w64 /h5 /c

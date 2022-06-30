@@ -1,6 +1,6 @@
 ; The first 7 keyboard mapping settings are defaults and built into installer.
 
-TITLE.1=ABD òngilizcesi (Varsayçlan)
+TITLE.1=ABD òngilizcesi (varsayçlan)
 VALUE.1=
 TITLE.2=òngiltere òngilizcesi
 VALUE.2=mkeyb UK
@@ -10,7 +10,7 @@ TITLE.4=Fransçzca
 VALUE.4=mkeyb FR
 TITLE.5=Almanca
 VALUE.5=mkeyb GR
-TITLE.6=Hollanda
+TITLE.6=Hollandaca
 VALUE.6=mkeyb NE
 TITLE.7=TÅrkáe
 VALUE.7=keyb TR,857,%DOSDIR%\BIN\KEYBRD2.SYS

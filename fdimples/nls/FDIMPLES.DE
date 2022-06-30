@@ -1,5 +1,5 @@
 ; Provided by Google Translate, modified by W. Spiegl
-
+; NUMBER 7 should not have an overlong.text! 
 0:DE
 1:Ungltiger Parameter
 2:Bitte warten...
@@ -7,7 +7,7 @@
 4:drcke eine Taste...
 5:Gruppe
 6:Paketmedium wurde nicht gefunden!
-7:Es werden nur installierte Pakete angezeigt.
+7:Zeigt nur installierte Pakete.
 8:Paket-Manager FDINST kann nicht gefunden werden.
 9:TEMP-Umgebungsvariable ist nicht festgelegt.
 10:unbekannt
@@ -52,18 +52,18 @@
 
 {Hilfemeldungen und dergleichen}
 50:Ver”ffentlicht unter der GNU General Public License, Version 2.0
-51:Copyright 2020 Jerome Shidel
+51:Copyright 2016-2022 Jerome Shidel
 52:FDIMPLES bietet eine benutzerfreundliche Textbenutzeroberfl„che fr das Befehlszeilenprogramm des FDINST-Paketmanagers.
 
 53:Zeigt diesen Hilfebildschirm an.
 54:Dateiliste in Paketbeschreibung anzeigen.
 55:[NICHT ausw„hlen] Aktualisierbare Pakete automatisch ausw„hlen.
-56:Paketlistendateien zur Verwendung mit dem FDI-Build-Programm erstellen.
+56:Erstellen Sie Paketlistendateien zur Verwendung mit dem FDI-Build-Dienstprogramm.
 57:FDI-Installationsprogramm BASE und ALLE Paketlisten neu konfigurieren.
 
 58:Tastaturbefehle der Benutzeroberfl„che:
 59:Auswahl umschalten.
-60:Den Bereich oder die Schaltfl„che, die den Fokus hat „ndern.
+60:ndern Sie den Bereich oder die Schaltfl„che, die den Fokus hat.
 61:Ein Element nach oben oder unten bewegen, auch Bild auf/ab.
 62:Beenden, ohne nderungen vorzunehmen oder zu speichern.
 63:Hilfebildschirm anzeigen.
@@ -71,13 +71,15 @@
 65:Status aller aktualisierbaren Pakete umschalten.
 66:Zeigen Sie ausstehende nderungen an.
 67:Alle anstehenden nderungen l”schen.
-68:Anpassungsdatei fr die Paketliste, die nderungen enth„lt schreiben.
-69:Anpassungsdatei fr Paketliste lesen und nderungen bernehmen.
+68:Schreiben Sie eine Anpassungsdatei fr die Paketliste, die nderungen enth„lt.
+69:Lesen Sie eine Anpassungsdatei fr die Paketliste und bernehmen Sie die nderungen.
+70:Ruhezustand der CPU im Leerlauf.
+71:Geben Sie Laufwerk oder Pfad zum Daten-Aufbewahrungsort (Repository) an.
 
 {Paket-IDs sind alle 100}
 100:=Eingerichtet!
 100:BASE=FreeDOS Base
-100:ARCHIVER=Archivers
+100:ARCHIVER=Archivierer
 100:BOOT=Boot-Dienstprogramme
 100:DEVEL=Entwicklung
 100:EDIT=Editoren

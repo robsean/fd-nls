@@ -1,3 +1,5 @@
+#identifikuj_se
+ÄŒeÅ¡tina
 #sys_font
 <FONT=latin216.ch>
 #sys_font_maly
@@ -29,11 +31,21 @@ Konec   <<ESC>>
 #m16
 Zavý¡t  <<Alt-F3>>
 #m21
+VìbØr barev
+#m211
 Barva popýed¡
-#m22
+#m212
 Barva pozad¡
-#m23
+#m213
 Barva podkladu
+#m214
+OznaŸenì text
+#m215
+Barva pro zvìraznØn¡ ý dky
+#m22
+Jazyk
+#m23
+ZvìraznØn¡ akt. ý dky
 #m24
 VìbØr fontu
 #m25
@@ -51,8 +63,10 @@ Pýevod do UTF-8
 #m42
 Pýevod z UTF-8
 #m43
+Zalamov n¡ ý dek
+#m431
 Zafixuj nal m n¡ ý dek
-#m43_pomoc
+#m431_pomoc
 ü dky, kter‚ jsou automaticky nal m ny algoritmy zalomov n¡ ý dek zafixuje
 v aktu ln¡m stavu. Ke ka§d‚ ý dce tedy pýid  pý¡znak n siln‚ho ukonŸen¡ ý dky.
 #m44
@@ -65,6 +79,14 @@ NahraÔ      <<Ctrl-H>>
 Mapa znak…
 #m48
 ASCII pýevody
+#m49
+Operace s bloky
+#m491
+Znaky do HTML entit
+#m492
+Na velk  p¡smena
+#m493
+Na mal  p¡smena
 #vyber_soubor
 Vyber soubor:
 #jak_to_ulozit
@@ -100,6 +122,8 @@ Vyber barvu popýed¡
 Vyber barvu pozad¡
 #vyber_barvu_zakladu
 Vyber barvu z kladu
+#zda_pro_rad
+ProsvØcovat akt. ý dek?
 #nastaveni_ulozeno
 Nastaven¡ ulo§eno
 #ok
@@ -110,17 +134,18 @@ Nastaven¡ ulo§eno
 Tato funkce zat¡m nen¡ k dispozici.
 #text_napovedy
 <FONT=surea37.fn>BloŸek<SF>
-verze 1.4
-datum kompilace: <BARVA=65535>27.3.2013<SB>
+verze 1.62
+datum kompilace: <BARVA=65535>15.1.2019<SB>
 Laaca (laaca@seznam.cz)
 
 BloŸek je textovì editor a prohl¡§eŸ obr zk…
 schopnì mimo jin‚ pr ce se soubory v k¢dov n¡ UTF-8,
 co§ ho Ÿin¡ velice vhodnìm napý¡klad na tvorbu WWW str nek.
+BloŸek je schopen pracovat i s velmi velkìmi soubory a s velmi
+dlouhìmi ý dkami. DØkuji Mateuszu Vistemu za Unicode fonty.
+BloŸek se rovnØ§ um¡ chovat jako prohl¡§eŸ obr zk… v bØ§nìch form tech.
+Nen¡ ale schopen jejich editace.
 
-BloŸek nem  § dn  omezen¡ ohlednØ maxim ln¡
-velikosti souboru nebo maxim ln¡ d‚lky ý dky.
-DØkuji Matheuszu "Foxovi" Vistemu za Unicode fonty.
 Tento program m…§e bìt ç¡ýen pod podm¡nkami GNU/GPL licence
 #vyber_filtr
 Vyber filtr
@@ -134,32 +159,48 @@ M m nahrazovat nezn m‚ znaky otazn¡kem?
 #parametr_otaznik
 Syntax:
 BLOCEK [soubor1 [, soubor2 [,...]]]
-#zoom
-fullscreen
+#ovladani_obrazku
+fullscreen*o<<>>O*+90*-90*horiz*vert*Exif data
 #zoom_info
 Rozt hne (smrçt¡) obr zek na celou obrazovku.
-#plus90
-+90ø
+#obrorig_info
+Pýep¡n  mezi origin ln¡ velikost¡ a zmençeninou, aby byl obr zek vidØt celì
 #plus90_info
 otoŸ¡ obr zek o 90 stupå… po smØru hodin
-#minus90
--90ø
 #minus90_info
 otoŸ¡ obr zek o 90 stupå… proti smØru hodin
+#fliphorz_info
+Prohod¡ levou a pravou stranu obr zku
+#flipvert_info
+Prohod¡ horn¡ a doln¡ stranu obr zku
+#exifdata_info
+Uk §e informace o obr zku z EXIF tagu (dostupn‚ v nØkterìch JPEG souborech)
 #chyba
 Chyba!
 #soubor_nebyl_ulozen
 Soubor nebyl ulo§en!
 na jednotce je m lo m¡sta nebo je
 jednotka jen pro Ÿten¡
-#fliphorz
-horiz.
-#flipvert
-vert.
-#fliphorz_info
-Prohod¡ levou a pravou stranu obr zku
-#flipvert_info
-Prohod¡ horn¡ a doln¡ stranu obr zku
+#informace_exif
+Informace z Exif bloku
+#exif_date_strs
+Datum a Ÿas:         *Datum a Ÿas origin lu:*Datum a Ÿas poý¡zen¡ sn¡mku:
+#exif_camera_info
+Vìrobce fotoapar tu:*Model fotoapar tu:*Popiska:*Software:*Zdroj svØtla:*Blesk:*Re§im expozice:*ISO:*¬as expozice:*Orientace:*Zoom:
+#exif_lightsrc_info
+Nezn mì*Denn¡ svØtlo*Flourescent*Tungsten*Blesk*Standardn¡ svØtlo A*Standardn¡ svØtlo B*Standardn¡ svØtlo C*D55*D65*D75*Jinì zdroj*Nezn mì
+#exif_flash_info
+Bez blesku*Blesk*Blesk bez pýedz blask…*Blesk s pýedz blesky*Blesk podle automatiky*Bez blesku*Nezn mo
+#exif_expos_mode
+Nezn mì*RuŸn¡ re§im*Norm ln¡ program*Aperture Priority*Shutter Priority*Creative Program*Re§im akce*Portr‚tovì re§im*Re§im krajiny*Nezn mì
+#exif_orientation_desc
+Norm ln¡*Horiz. pýevr cen¡*OtoŸen¡ o 180ø*Vert. pýevr cen¡*OtoŸen¡ o 90ø vlevo a pýevr cen¡*OtoŸen¡ o 90ø vpravo*OtoŸen¡ o 90ø vpravo a pýevr cen¡*OtoŸen¡ o 90ø vlevo*Nezn m 
+#exif_zoom_unused
+Nepou§it
+#exif_GPS_info
+Informace o poloze GPS*ç¡ýka:*d‚lka:*vìçka:*azimut*S*J*Z*V*m*ø*ï*ñ
+#zkopirovat_exif
+Do schr nky
 #nejde_o_obrazek
 Soubor je poçkozen nebo obrazov 
 data nejsou v podporovan‚m form tu
@@ -225,8 +266,6 @@ Do konfiguraŸn¡ho souboru <BARVA=65535>BLOCEK.CFG<SB>
 byly ze souboru <BARVA=65535>DEFAULT.CFG<SB> pýekop¡rov ny tyto polo§ky:
 #pocet_zmen
 PoŸet zmØn:
-#pametinfo
-Tato funkce zat¡m nen¡ k dispozici :-(
 #neniswap
 V ç syst‚m nepodporuje virtu ln¡ pamØœ!
 To m…§e bìt nebezpeŸn‚ a hroz¡ nedostatek pamØti.
@@ -259,24 +298,43 @@ PokraŸovat?
 oznaŸeno:
 #ozn_nic
 nic
-#procesor
-Procesor:
-#pamet
-PamØœ:
-#mb_ram
-MB RAM
-#Video
-Video:
-#videopamet
-VideopamØœ
-#verzevesa
-Verze VESA:
-#videomod
-Videom¢d:
-#refreshfq
-Obnovovac¡ frekvence:
-#verzedosu
-Verze DOSu:
-#biosdefault
-BIOS default
-
+#kompinfo
+Procesor:*PamØœ:*MB RAM*Video:* Verze VESA:*Videom¢d:*VidepamØœ*Obnovovac¡ frekvence:*BIOS default*Verze DOSu:
+#schranka_c
+Schr nka Ÿ.
+#schranka_do
+Kop¡rovat do schr nky
+#schranka_ze
+Vlo§it ze schr nky
+#schranka_copy
+Pýekop¡rovat do jin‚ schr nky
+#schranka_smaz
+Sma§
+#vyber_jazyk
+Vyber jazyk
+#nutny_restart
+Pro pýepnut¡ jazyka je týeba restart programu.
+#prevod_html_entity
+Pýevod do HTML entit
+#prevod_html_ent_info
+Znaky s ASCII nebo Unicode hodnotou nad 255
+pýevede do HTML entit.
+Rozsah pýevodu je urŸen textovìm blokem.
+#text_je_v_unicode
+Text je v unicode.
+#text_je_v_ascii
+Text je v ASCII k¢dov n¡ a bude
+pýeveden podle konverzn¡ tabulky.
+#neni_oz_blok
+Nen¡ oznaŸen § dnì blok - budu tedy pýev dØt
+celì text
+#prevod_mala_velka
+Text na velk  p¡smena
+#prevod_mala_velka_inf
+Mal  p¡smena v zadan‚m bloku zmØn¡ na velk .
+Ostatn¡ znaky nemØn¡.
+#prevod_velka_mala
+Text na mal  p¡smena
+#prevod_velka_mala_inf
+Velk  p¡smena v zadan‚m bloku zmØn¡ na mal .
+Ostatn¡ znaky nemØn¡.
